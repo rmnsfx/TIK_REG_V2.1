@@ -52,7 +52,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
+          <BrowseInformation>1</BrowseInformation>
           <ListingPath></ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -347,7 +347,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>3</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -356,7 +356,7 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>1</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc; ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F; ../Drivers/CMSIS/Device/ST/STM32F4xx/Include; ../Drivers/CMSIS/Include</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include;..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil;..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -412,6 +412,71 @@
               <FileName>startup_stm32f407xx.s</FileName>
               <FileType>2</FileType>
               <FilePath>startup_stm32f407xx.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FreeRTOS-Plus-TCP</GroupName>
+          <Files>
+            <File>
+              <FileName>FreeRTOS_ARP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_ARP.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_DHCP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_DHCP.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_DNS.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_DNS.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_IP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_IP.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_Sockets.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_Sockets.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_Stream_Buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_Stream_Buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_TCP_IP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_TCP_IP.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_TCP_WIN.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_TCP_WIN.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_UDP_IP.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_UDP_IP.c</FilePath>
+            </File>
+            <File>
+              <FileName>BufferAllocation_2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\BufferManagement\BufferAllocation_2.c</FilePath>
+            </File>
+            <File>
+              <FileName>NetworkInterface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\STM32Fxx\NetworkInterface.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_eth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\STM32Fxx\stm32f4xx_hal_eth.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -481,11 +546,6 @@
         <Group>
           <GroupName>Drivers/STM32F4xx_HAL_Driver</GroupName>
           <Files>
-            <File>
-              <FileName>stm32f4xx_hal_eth.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c</FilePath>
-            </File>
             <File>
               <FileName>stm32f4xx_hal_rcc.c</FileName>
               <FileType>1</FileType>

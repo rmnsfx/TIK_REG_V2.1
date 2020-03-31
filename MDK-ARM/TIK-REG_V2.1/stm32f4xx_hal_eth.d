@@ -1,4 +1,4 @@
-tik-reg_v2.1\stm32f4xx_hal_eth.o: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.c
+tik-reg_v2.1\stm32f4xx_hal_eth.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\STM32Fxx\stm32f4xx_hal_eth.c
 tik-reg_v2.1\stm32f4xx_hal_eth.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 tik-reg_v2.1\stm32f4xx_hal_eth.o: ../Inc/stm32f4xx_hal_conf.h
 tik-reg_v2.1\stm32f4xx_hal_eth.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
