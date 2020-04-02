@@ -1513,3 +1513,7 @@ uint32_t ulApplicationGetNextSequenceNumber( uint32_t ulSourceAddress,
 	
 }
 	
+void vApplicationPingReplyHook(ePingReplyStatus_t eStatus, uint16_t usIdentifier)
+{
+	
+}

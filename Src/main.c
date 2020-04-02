@@ -50,7 +50,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint8_t ucMACAddress[6] = { 0x02, 0x80, 0xE1, 0x00, 0x00, 0x00 };
+const uint8_t ucMACAddress[6] = { 0x03, 0x80, 0xE1, 0x00, 0x00, 0x00 };
+const uint8_t ucIPAddress[ 4 ] = { 192, 168, 1, 5 };
+const uint8_t ucNetMask[ 4 ] = { 255, 255, 255, 0 };
+const uint8_t ucGatewayAddress[ 4 ] = { 192, 168, 1, 2 };
+const uint8_t ucDNSServerAddress[ 4 ] = { 8, 8, 8, 8 };
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -99,9 +103,10 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
-  MX_ETH_Init();
+  //MX_ETH_Init();
   /* USER CODE BEGIN 2 */
-
+	xNetworkInterfaceInitialise();
+	FreeRTOS_IPInit( ucIPAddress, ucNetMask, ucGatewayAddress, ucDNSServerAddress, ucMACAddress );
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
