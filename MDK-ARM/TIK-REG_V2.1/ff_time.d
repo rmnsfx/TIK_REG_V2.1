@@ -1,0 +1,17 @@
+tik-reg_v2.1\ff_time.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-FAT\ff_time.c
+tik-reg_v2.1\ff_time.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+tik-reg_v2.1\ff_time.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
+tik-reg_v2.1\ff_time.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+tik-reg_v2.1\ff_time.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+tik-reg_v2.1\ff_time.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+tik-reg_v2.1\ff_time.o: ../Inc/FreeRTOSConfig.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+tik-reg_v2.1\ff_time.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+tik-reg_v2.1\ff_time.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-FAT\include\ff_time.h
+tik-reg_v2.1\ff_time.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-FAT\include\FreeRTOSFATConfig.h
