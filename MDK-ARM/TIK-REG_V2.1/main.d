@@ -50,6 +50,15 @@ tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 tik-reg_v2.1\main.o: ../Inc/dma.h
 tik-reg_v2.1\main.o: ../Inc/eth.h
+tik-reg_v2.1\main.o: ../Inc/fatfs.h
+tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FatFs/src/ff.h
+tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FatFs/src/integer.h
+tik-reg_v2.1\main.o: ../Inc/ffconf.h
+tik-reg_v2.1\main.o: ../Inc/bsp_driver_sd.h
+tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
+tik-reg_v2.1\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
+tik-reg_v2.1\main.o: ../Inc/sd_diskio.h
 tik-reg_v2.1\main.o: ../Inc/sdio.h
 tik-reg_v2.1\main.o: ../Inc/tim.h
 tik-reg_v2.1\main.o: ../Inc/usart.h

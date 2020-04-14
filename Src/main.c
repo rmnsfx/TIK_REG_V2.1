@@ -23,6 +23,7 @@
 #include "cmsis_os.h"
 #include "dma.h"
 #include "eth.h"
+#include "fatfs.h"
 #include "sdio.h"
 #include "tim.h"
 #include "usart.h"
@@ -104,6 +105,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
   //MX_ETH_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 	xNetworkInterfaceInitialise();
 	FreeRTOS_IPInit( ucIPAddress, ucNetMask, ucGatewayAddress, ucDNSServerAddress, ucMACAddress );
