@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */     
-
+#include "fatfs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,7 +46,12 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-
+	extern char SDPath[4];	
+	extern FATFS SDFatFS;
+  FIL testFile;
+  uint8_t testBuffer[16] = "SD write success";
+  UINT testBytes;
+  volatile FRESULT res;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
 
@@ -122,6 +127,20 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
+	
+	res = f_mount(&SDFatFS, SDPath, 1);
+	if( res == FR_OK)
+  {
+    uint8_t path[13] = "2file.txt";
+    path[12] = '\0';
+ 
+    res = f_open(&testFile, (char*)path, FA_WRITE | FA_CREATE_ALWAYS);
+ 
+    res = f_write(&testFile, testBuffer, 16, &testBytes);
+ 
+    res = f_close(&testFile);
+  }
+
   /* Infinite loop */
   for(;;)
   {

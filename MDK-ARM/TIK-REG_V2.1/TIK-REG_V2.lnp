@@ -16,6 +16,9 @@
 "tik-reg_v2.1\gpio.o"
 "tik-reg_v2.1\dma.o"
 "tik-reg_v2.1\eth.o"
+"tik-reg_v2.1\bsp_driver_sd.o"
+"tik-reg_v2.1\sd_diskio.o"
+"tik-reg_v2.1\fatfs.o"
 "tik-reg_v2.1\freertos.o"
 "tik-reg_v2.1\sdio.o"
 "tik-reg_v2.1\tim.o"
@@ -52,6 +55,10 @@
 "tik-reg_v2.1\cmsis_os.o"
 "tik-reg_v2.1\heap_4.o"
 "tik-reg_v2.1\port.o"
+"tik-reg_v2.1\diskio.o"
+"tik-reg_v2.1\ff.o"
+"tik-reg_v2.1\ff_gen_drv.o"
+"tik-reg_v2.1\syscall.o"
 --library_type=microlib --strict --scatter "TIK-REG_V2.1\TIK-REG_V2.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
