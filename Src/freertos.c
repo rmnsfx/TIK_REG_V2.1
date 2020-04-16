@@ -27,6 +27,11 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */     
 #include "fatfs.h"
+
+/* FreeRTOS+UDP includes. */
+#include "FreeRTOS_IP.h"
+#include "FreeRTOS_Sockets.h"
+#include "FreeRTOS_TCP_server.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -128,19 +133,33 @@ void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN StartDefaultTask */
 	
-	res = f_mount(&SDFatFS, SDPath, 1);
-	if( res == FR_OK)
-  {
-    uint8_t path[13] = "2file.txt";
-    path[12] = '\0';
- 
-    res = f_open(&testFile, (char*)path, FA_WRITE | FA_CREATE_ALWAYS);
- 
-    res = f_write(&testFile, testBuffer, 16, &testBytes);
- 
-    res = f_close(&testFile);
-  }
+//	res = f_mount(&SDFatFS, SDPath, 1);
+//	if( res == FR_OK)
+//  {
+//    uint8_t path[13] = "3file.txt";
+//    path[12] = '\0';
+// 
+//    res = f_open(&testFile, (char*)path, FA_WRITE | FA_CREATE_ALWAYS);
+// 
+//    res = f_write(&testFile, testBuffer, 16, &testBytes);
+// 
+//    res = f_close(&testFile);
+//  }
+#define configHTTP_ROOT "/websrc"
+const TickType_t xInitialBlockTime = pdMS_TO_TICKS( 5000UL );	
+TCPServer_t *pxTCPServer = NULL;	
+static const struct xSERVER_CONFIG xServerConfiguration[] =
+{
+		/* Server type,		port number,	backlog, 	root dir. */
+		{ eSERVER_HTTP, 	80, 			12, 		configHTTP_ROOT },
+		/* Server type,		port number,	backlog, 	root dir. */
+		{ eSERVER_FTP,  	21, 			12, 		"" }
+};
+	
+pxTCPServer = FreeRTOS_CreateTCPServer( xServerConfiguration, sizeof( xServerConfiguration ) / sizeof( xServerConfiguration[ 0 ] ) );
 
+FreeRTOS_TCPServerWork( pxTCPServer, xInitialBlockTime );
+	
   /* Infinite loop */
   for(;;)
   {

@@ -57,3 +57,13 @@ tik-reg_v2.1\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/c
 tik-reg_v2.1\freertos.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 tik-reg_v2.1\freertos.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 tik-reg_v2.1\freertos.o: ../Inc/sd_diskio.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_IP.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOSIPConfig.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOSIPConfigDefaults.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_errno_TCP.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\IPTraceMacroDefaults.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_start.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_end.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_Sockets.h
+tik-reg_v2.1\freertos.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+tik-reg_v2.1\freertos.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_TCP_server.h

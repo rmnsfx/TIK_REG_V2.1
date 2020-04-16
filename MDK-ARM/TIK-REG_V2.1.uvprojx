@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc;  ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;  ../Middlewares/Third_Party/FreeRTOS/Source/include;  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;  ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;  ../Drivers/CMSIS/Include;  ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include;  ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil;  ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\include; ../Middlewares/Third_Party/FatFs/src</IncludePath>
+              <IncludePath>../Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include;..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil;..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\include;../Middlewares/Third_Party/FatFs/src;..\Middlewares\Third_Party\protocols\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -477,6 +477,26 @@
               <FileName>stm32f4xx_hal_eth.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\STM32Fxx\stm32f4xx_hal_eth.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_TCP_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\FreeRTOS_TCP_server.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_HTTP_server.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\protocols\HTTP\FreeRTOS_HTTP_server.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_HTTP_commands.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\protocols\HTTP\FreeRTOS_HTTP_commands.c</FilePath>
+            </File>
+            <File>
+              <FileName>FreeRTOS_FTP_commands.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\Third_Party\protocols\FTP\FreeRTOS_FTP_commands.c</FilePath>
             </File>
           </Files>
         </Group>
