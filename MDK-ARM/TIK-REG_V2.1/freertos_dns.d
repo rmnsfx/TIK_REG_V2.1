@@ -60,9 +60,3 @@ tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\includ
 tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_DNS.h
 tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\NetworkBufferManagement.h
 tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\NetworkInterface.h
-tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_start.h
-tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_end.h
-tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_start.h
-tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_end.h
-tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_start.h
-tik-reg_v2.1\freertos_dns.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil\pack_struct_end.h

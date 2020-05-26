@@ -58,40 +58,6 @@ Section Cross References
     freertos_arp.o(i.vARPRefreshCacheEntry) refers to freertos_arp.o(.bss) for xARPCache
     freertos_arp.o(i.vARPSendGratuitous) refers to freertos_ip.o(i.xSendEventToIPTask) for xSendEventToIPTask
     freertos_arp.o(i.vARPSendGratuitous) refers to freertos_arp.o(.data) for xLastGratuitousARPTime
-    freertos_dns.o(i.FreeRTOS_dnsclear) refers to memseta.o(.text) for __aeabi_memclr4
-    freertos_dns.o(i.FreeRTOS_dnsclear) refers to freertos_dns.o(.bss) for xDNSCache
-    freertos_dns.o(i.FreeRTOS_dnslookup) refers to freertos_dns.o(i.prvProcessDNSCache) for prvProcessDNSCache
-    freertos_dns.o(i.FreeRTOS_gethostbyname) refers to freertos_sockets.o(i.FreeRTOS_inet_addr) for FreeRTOS_inet_addr
-    freertos_dns.o(i.FreeRTOS_gethostbyname) refers to freertos_dns.o(i.FreeRTOS_dnslookup) for FreeRTOS_dnslookup
-    freertos_dns.o(i.FreeRTOS_gethostbyname) refers to freertos_dns.o(i.prvGetHostByName) for prvGetHostByName
-    freertos_dns.o(i.prvCreateDNSMessage) refers to strcpy.o(.text) for strcpy
-    freertos_dns.o(i.prvCreateDNSMessage) refers to strlen.o(.text) for strlen
-    freertos_dns.o(i.prvCreateDNSMessage) refers to freertos_dns.o(.constdata) for xDefaultPartDNSHeader
-    freertos_dns.o(i.prvCreateDNSSocket) refers to freertos_sockets.o(i.FreeRTOS_socket) for FreeRTOS_socket
-    freertos_dns.o(i.prvCreateDNSSocket) refers to freertos_sockets.o(i.FreeRTOS_bind) for FreeRTOS_bind
-    freertos_dns.o(i.prvCreateDNSSocket) refers to freertos_sockets.o(i.FreeRTOS_closesocket) for FreeRTOS_closesocket
-    freertos_dns.o(i.prvGetHostByName) refers to strlen.o(.text) for strlen
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_dns.o(i.prvCreateDNSSocket) for prvCreateDNSSocket
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_sockets.o(i.FreeRTOS_setsockopt) for FreeRTOS_setsockopt
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_ip.o(i.FreeRTOS_GetUDPPayloadBuffer) for FreeRTOS_GetUDPPayloadBuffer
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_dns.o(i.prvCreateDNSMessage) for prvCreateDNSMessage
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_ip.o(i.FreeRTOS_GetAddressConfiguration) for FreeRTOS_GetAddressConfiguration
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_sockets.o(i.FreeRTOS_sendto) for FreeRTOS_sendto
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_sockets.o(i.FreeRTOS_recvfrom) for FreeRTOS_recvfrom
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_dns.o(i.prvParseDNSReply) for prvParseDNSReply
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_ip.o(i.FreeRTOS_ReleaseUDPPayloadBuffer) for FreeRTOS_ReleaseUDPPayloadBuffer
-    freertos_dns.o(i.prvGetHostByName) refers to freertos_sockets.o(i.FreeRTOS_closesocket) for FreeRTOS_closesocket
-    freertos_dns.o(i.prvParseDNSReply) refers to memseta.o(.text) for __aeabi_memclr4
-    freertos_dns.o(i.prvParseDNSReply) refers to freertos_dns.o(i.prvReadNameField) for prvReadNameField
-    freertos_dns.o(i.prvParseDNSReply) refers to freertos_dns.o(i.prvSkipNameField) for prvSkipNameField
-    freertos_dns.o(i.prvParseDNSReply) refers to freertos_dns.o(i.prvProcessDNSCache) for prvProcessDNSCache
-    freertos_dns.o(i.prvProcessDNSCache) refers to tasks.o(i.xTaskGetTickCount) for xTaskGetTickCount
-    freertos_dns.o(i.prvProcessDNSCache) refers to strcmp.o(.text) for strcmp
-    freertos_dns.o(i.prvProcessDNSCache) refers to strlen.o(.text) for strlen
-    freertos_dns.o(i.prvProcessDNSCache) refers to strcpy.o(.text) for strcpy
-    freertos_dns.o(i.prvProcessDNSCache) refers to freertos_dns.o(.bss) for xDNSCache
-    freertos_dns.o(i.prvProcessDNSCache) refers to freertos_dns.o(.data) for xFreeEntry
-    freertos_dns.o(i.ulDNSHandlePacket) refers to freertos_dns.o(i.prvParseDNSReply) for prvParseDNSReply
     freertos_ip.o(i.FreeRTOS_GetAddressConfiguration) refers to freertos_udp_ip.o(.data) for xDefaultPartUDPPacketHeader
     freertos_ip.o(i.FreeRTOS_GetAddressConfiguration) refers to freertos_ip.o(.bss) for xNetworkAddressing
     freertos_ip.o(i.FreeRTOS_GetDNSServerAddress) refers to freertos_ip.o(.bss) for xNetworkAddressing
@@ -2454,20 +2420,6 @@ Removing Unused input sections from the image.
 
     Removing startup_stm32f407xx.o(HEAP), (512 bytes).
     Removing freertos_arp.o(i.vARPSendGratuitous), (20 bytes).
-    Removing freertos_dns.o(i.FreeRTOS_dnsclear), (20 bytes).
-    Removing freertos_dns.o(i.FreeRTOS_dnslookup), (24 bytes).
-    Removing freertos_dns.o(i.FreeRTOS_gethostbyname), (74 bytes).
-    Removing freertos_dns.o(i.prvCreateDNSMessage), (124 bytes).
-    Removing freertos_dns.o(i.prvCreateDNSSocket), (48 bytes).
-    Removing freertos_dns.o(i.prvGetHostByName), (268 bytes).
-    Removing freertos_dns.o(i.prvParseDNSReply), (346 bytes).
-    Removing freertos_dns.o(i.prvProcessDNSCache), (484 bytes).
-    Removing freertos_dns.o(i.prvReadNameField), (148 bytes).
-    Removing freertos_dns.o(i.prvSkipNameField), (76 bytes).
-    Removing freertos_dns.o(i.ulDNSHandlePacket), (40 bytes).
-    Removing freertos_dns.o(.bss), (268 bytes).
-    Removing freertos_dns.o(.constdata), (12 bytes).
-    Removing freertos_dns.o(.data), (4 bytes).
     Removing freertos_ip.o(i.FreeRTOS_GetDNSServerAddress), (12 bytes).
     Removing freertos_ip.o(i.FreeRTOS_GetGatewayAddress), (12 bytes).
     Removing freertos_ip.o(i.FreeRTOS_GetIPAddress), (12 bytes).
@@ -2487,7 +2439,7 @@ Removing Unused input sections from the image.
     Removing freertos_ip.o(i.pxDuplicateNetworkBufferWithDescriptor), (46 bytes).
     Removing freertos_ip.o(i.pxUDPPayloadBuffer_to_NetworkBuffer), (26 bytes).
     Removing freertos_ip.o(i.usGenerateChecksum), (332 bytes).
-    Removing freertos_ip.o(i.usGenerateProtocolChecksum), (330 bytes).
+    Removing freertos_ip.o(i.usGenerateProtocolChecksum), (328 bytes).
     Removing freertos_sockets.o(i.FreeRTOS_CreateSocketSet), (42 bytes).
     Removing freertos_sockets.o(i.FreeRTOS_DeleteSocketSet), (20 bytes).
     Removing freertos_sockets.o(i.FreeRTOS_FD_CLR), (100 bytes).
@@ -3234,7 +3186,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-781 unused section(s) (total 75740 bytes) removed from the image.
+767 unused section(s) (total 73802 bytes) removed from the image.
 
 ==============================================================================
 
@@ -3292,35 +3244,35 @@ Image Symbol Table
     ../Src/tim.c                             0x00000000   Number         0  tim.o ABSOLUTE
     ../Src/usart.c                           0x00000000   Number         0  usart.o ABSOLUTE
     ../clib/microlib/ctype/tolower.c         0x00000000   Number         0  tolower.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
@@ -3328,13 +3280,12 @@ Image Symbol Table
     ../clib/microlib/string/memcmp.c         0x00000000   Number         0  memcmp.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmoveb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmovea.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
-    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memmovea.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memset.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/string/strcasecmp.c     0x00000000   Number         0  strcasecmp.o ABSOLUTE
     ../clib/microlib/string/strchr.c         0x00000000   Number         0  strchr.o ABSOLUTE
-    ../clib/microlib/string/strcmp.c         0x00000000   Number         0  strcmp.o ABSOLUTE
     ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
@@ -3737,7 +3688,7 @@ Image Symbol Table
     i.prvCheckTasksWaitingTermination        0x080065c8   Section        0  tasks.o(i.prvCheckTasksWaitingTermination)
     prvCheckTasksWaitingTermination          0x080065c9   Thumb Code    60  tasks.o(i.prvCheckTasksWaitingTermination)
     i.prvConnectionListeningTask             0x08006610   Section        0  freertos.o(i.prvConnectionListeningTask)
-    prvConnectionListeningTask               0x08006611   Thumb Code   208  freertos.o(i.prvConnectionListeningTask)
+    prvConnectionListeningTask               0x08006611   Thumb Code   206  freertos.o(i.prvConnectionListeningTask)
     i.prvCopyDataFromQueue                   0x080066e4   Section        0  queue.o(i.prvCopyDataFromQueue)
     prvCopyDataFromQueue                     0x080066e5   Thumb Code    42  queue.o(i.prvCopyDataFromQueue)
     i.prvCopyDataToQueue                     0x0800670e   Section        0  queue.o(i.prvCopyDataToQueue)
@@ -4145,8 +4096,8 @@ Image Symbol Table
     STACK                                    0x10002168   Section     1024  startup_stm32f407xx.o(STACK)
     .bss                                     0x20000000   Section    12520  networkinterface.o(.bss)
     xETH                                     0x20000000   Data          72  networkinterface.o(.bss)
-    .bss                                     0x200030e8   Section    65536  heap_4.o(.bss)
-    ucHeap                                   0x200030e8   Data       65536  heap_4.o(.bss)
+    .bss                                     0x200030e8   Section    64512  heap_4.o(.bss)
+    ucHeap                                   0x200030e8   Data       64512  heap_4.o(.bss)
 
     Global Symbols
 
@@ -4660,524 +4611,524 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x00000188   Data   RO            3    RESET               startup_stm32f407xx.o
-    0x08000188   0x00000000   Code   RO         7755  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000188   0x00000004   Code   RO         8045    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800018c   0x00000004   Code   RO         8048    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000190   0x00000000   Code   RO         8050    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000190   0x00000000   Code   RO         8052    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000190   0x00000008   Code   RO         8053    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000198   0x00000000   Code   RO         8055    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000198   0x00000000   Code   RO         8057    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000198   0x00000004   Code   RO         8046    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x0800019c   0x000000be   Code   RO         7158    .emb_text           port.o
+    0x08000188   0x00000000   Code   RO         7685  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000188   0x00000004   Code   RO         7973    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800018c   0x00000004   Code   RO         7976    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000190   0x00000000   Code   RO         7978    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000190   0x00000000   Code   RO         7980    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000190   0x00000008   Code   RO         7981    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000198   0x00000000   Code   RO         7983    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000198   0x00000000   Code   RO         7985    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000198   0x00000004   Code   RO         7974    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0800019c   0x000000be   Code   RO         7088    .emb_text           port.o
     0x0800025a   0x00000002   PAD
     0x0800025c   0x00000024   Code   RO            4    .text               startup_stm32f407xx.o
-    0x08000280   0x00000062   Code   RO         7758    .text               mc_w.l(uldiv.o)
-    0x080002e2   0x00000040   Code   RO         7762    .text               mc_w.l(memmovea.o)
-    0x08000322   0x00000024   Code   RO         7766    .text               mc_w.l(memseta.o)
-    0x08000346   0x0000001a   Code   RO         7774    .text               mc_w.l(memcmp.o)
-    0x08000360   0x0000002c   Code   RO         8062    .text               mc_w.l(uidiv.o)
-    0x0800038c   0x0000001e   Code   RO         8064    .text               mc_w.l(llshl.o)
-    0x080003aa   0x00000020   Code   RO         8066    .text               mc_w.l(llushr.o)
+    0x08000280   0x00000062   Code   RO         7688    .text               mc_w.l(uldiv.o)
+    0x080002e2   0x00000040   Code   RO         7692    .text               mc_w.l(memmovea.o)
+    0x08000322   0x00000024   Code   RO         7696    .text               mc_w.l(memseta.o)
+    0x08000346   0x0000001a   Code   RO         7702    .text               mc_w.l(memcmp.o)
+    0x08000360   0x0000002c   Code   RO         7990    .text               mc_w.l(uidiv.o)
+    0x0800038c   0x0000001e   Code   RO         7992    .text               mc_w.l(llshl.o)
+    0x080003aa   0x00000020   Code   RO         7994    .text               mc_w.l(llushr.o)
     0x080003ca   0x00000002   PAD
-    0x080003cc   0x00000024   Code   RO         8081    .text               mc_w.l(init.o)
-    0x080003f0   0x00000002   Code   RO         2277    i.BSP_SD_AbortCallback  bsp_driver_sd.o
+    0x080003cc   0x00000024   Code   RO         8009    .text               mc_w.l(init.o)
+    0x080003f0   0x00000002   Code   RO         2207    i.BSP_SD_AbortCallback  bsp_driver_sd.o
     0x080003f2   0x00000002   PAD
-    0x080003f4   0x00000014   Code   RO         2280    i.BSP_SD_GetCardInfo  bsp_driver_sd.o
-    0x08000408   0x00000018   Code   RO         2281    i.BSP_SD_GetCardState  bsp_driver_sd.o
-    0x08000420   0x00000030   Code   RO         2283    i.BSP_SD_Init       bsp_driver_sd.o
-    0x08000450   0x0000000c   Code   RO         2284    i.BSP_SD_IsDetected  bsp_driver_sd.o
-    0x0800045c   0x00000028   Code   RO         2286    i.BSP_SD_ReadBlocks_DMA  bsp_driver_sd.o
-    0x08000484   0x00000014   Code   RO         2398    i.BSP_SD_ReadCpltCallback  sd_diskio.o
-    0x08000498   0x00000028   Code   RO         2289    i.BSP_SD_WriteBlocks_DMA  bsp_driver_sd.o
-    0x080004c0   0x00000014   Code   RO         2399    i.BSP_SD_WriteCpltCallback  sd_diskio.o
-    0x080004d4   0x00000004   Code   RO         2728    i.BusFault_Handler  stm32f4xx_it.o
-    0x080004d8   0x00000010   Code   RO         2729    i.DMA2_Stream2_IRQHandler  stm32f4xx_it.o
-    0x080004e8   0x00000010   Code   RO         2730    i.DMA2_Stream3_IRQHandler  stm32f4xx_it.o
-    0x080004f8   0x00000010   Code   RO         2731    i.DMA2_Stream6_IRQHandler  stm32f4xx_it.o
-    0x08000508   0x00000010   Code   RO         2732    i.DMA2_Stream7_IRQHandler  stm32f4xx_it.o
-    0x08000518   0x00000034   Code   RO         3419    i.DMA_CalcBaseAndBitshift  stm32f4xx_hal_dma.o
-    0x0800054c   0x000000aa   Code   RO         3420    i.DMA_CheckFifoParam  stm32f4xx_hal_dma.o
-    0x080005f6   0x0000002c   Code   RO         3421    i.DMA_SetConfig     stm32f4xx_hal_dma.o
-    0x08000622   0x00000002   Code   RO         2733    i.DebugMon_Handler  stm32f4xx_it.o
-    0x08000624   0x0000001c   Code   RO         1710    i.ETH_DMAReceptionDisable  stm32f4xx_hal_eth.o
-    0x08000640   0x0000001c   Code   RO         1711    i.ETH_DMAReceptionEnable  stm32f4xx_hal_eth.o
-    0x0800065c   0x0000001c   Code   RO         1712    i.ETH_DMATransmissionDisable  stm32f4xx_hal_eth.o
-    0x08000678   0x0000001c   Code   RO         1713    i.ETH_DMATransmissionEnable  stm32f4xx_hal_eth.o
-    0x08000694   0x0000001c   Code   RO         1714    i.ETH_FlushTransmitFIFO  stm32f4xx_hal_eth.o
-    0x080006b0   0x00000010   Code   RO         1473    i.ETH_IRQHandler    networkinterface.o
-    0x080006c0   0x0000003c   Code   RO         1715    i.ETH_MACAddressConfig  stm32f4xx_hal_eth.o
-    0x080006fc   0x00000218   Code   RO         1716    i.ETH_MACDMAConfig  stm32f4xx_hal_eth.o
-    0x08000914   0x00000018   Code   RO         1717    i.ETH_MACReceptionDisable  stm32f4xx_hal_eth.o
-    0x0800092c   0x00000018   Code   RO         1718    i.ETH_MACReceptionEnable  stm32f4xx_hal_eth.o
-    0x08000944   0x00000016   Code   RO         1719    i.ETH_MACTransmissionDisable  stm32f4xx_hal_eth.o
-    0x0800095a   0x00000016   Code   RO         1720    i.ETH_MACTransmissionEnable  stm32f4xx_hal_eth.o
-    0x08000970   0x0000000c   Code   RO         2734    i.EXTI9_5_IRQHandler  stm32f4xx_it.o
-    0x0800097c   0x00000002   Code   RO         2107    i.Error_Handler     main.o
-    0x0800097e   0x00000012   Code   RO         7660    i.FATFS_LinkDriver  ff_gen_drv.o
-    0x08000990   0x00000054   Code   RO         7661    i.FATFS_LinkDriverEx  ff_gen_drv.o
+    0x080003f4   0x00000014   Code   RO         2210    i.BSP_SD_GetCardInfo  bsp_driver_sd.o
+    0x08000408   0x00000018   Code   RO         2211    i.BSP_SD_GetCardState  bsp_driver_sd.o
+    0x08000420   0x00000030   Code   RO         2213    i.BSP_SD_Init       bsp_driver_sd.o
+    0x08000450   0x0000000c   Code   RO         2214    i.BSP_SD_IsDetected  bsp_driver_sd.o
+    0x0800045c   0x00000028   Code   RO         2216    i.BSP_SD_ReadBlocks_DMA  bsp_driver_sd.o
+    0x08000484   0x00000014   Code   RO         2328    i.BSP_SD_ReadCpltCallback  sd_diskio.o
+    0x08000498   0x00000028   Code   RO         2219    i.BSP_SD_WriteBlocks_DMA  bsp_driver_sd.o
+    0x080004c0   0x00000014   Code   RO         2329    i.BSP_SD_WriteCpltCallback  sd_diskio.o
+    0x080004d4   0x00000004   Code   RO         2658    i.BusFault_Handler  stm32f4xx_it.o
+    0x080004d8   0x00000010   Code   RO         2659    i.DMA2_Stream2_IRQHandler  stm32f4xx_it.o
+    0x080004e8   0x00000010   Code   RO         2660    i.DMA2_Stream3_IRQHandler  stm32f4xx_it.o
+    0x080004f8   0x00000010   Code   RO         2661    i.DMA2_Stream6_IRQHandler  stm32f4xx_it.o
+    0x08000508   0x00000010   Code   RO         2662    i.DMA2_Stream7_IRQHandler  stm32f4xx_it.o
+    0x08000518   0x00000034   Code   RO         3349    i.DMA_CalcBaseAndBitshift  stm32f4xx_hal_dma.o
+    0x0800054c   0x000000aa   Code   RO         3350    i.DMA_CheckFifoParam  stm32f4xx_hal_dma.o
+    0x080005f6   0x0000002c   Code   RO         3351    i.DMA_SetConfig     stm32f4xx_hal_dma.o
+    0x08000622   0x00000002   Code   RO         2663    i.DebugMon_Handler  stm32f4xx_it.o
+    0x08000624   0x0000001c   Code   RO         1640    i.ETH_DMAReceptionDisable  stm32f4xx_hal_eth.o
+    0x08000640   0x0000001c   Code   RO         1641    i.ETH_DMAReceptionEnable  stm32f4xx_hal_eth.o
+    0x0800065c   0x0000001c   Code   RO         1642    i.ETH_DMATransmissionDisable  stm32f4xx_hal_eth.o
+    0x08000678   0x0000001c   Code   RO         1643    i.ETH_DMATransmissionEnable  stm32f4xx_hal_eth.o
+    0x08000694   0x0000001c   Code   RO         1644    i.ETH_FlushTransmitFIFO  stm32f4xx_hal_eth.o
+    0x080006b0   0x00000010   Code   RO         1403    i.ETH_IRQHandler    networkinterface.o
+    0x080006c0   0x0000003c   Code   RO         1645    i.ETH_MACAddressConfig  stm32f4xx_hal_eth.o
+    0x080006fc   0x00000218   Code   RO         1646    i.ETH_MACDMAConfig  stm32f4xx_hal_eth.o
+    0x08000914   0x00000018   Code   RO         1647    i.ETH_MACReceptionDisable  stm32f4xx_hal_eth.o
+    0x0800092c   0x00000018   Code   RO         1648    i.ETH_MACReceptionEnable  stm32f4xx_hal_eth.o
+    0x08000944   0x00000016   Code   RO         1649    i.ETH_MACTransmissionDisable  stm32f4xx_hal_eth.o
+    0x0800095a   0x00000016   Code   RO         1650    i.ETH_MACTransmissionEnable  stm32f4xx_hal_eth.o
+    0x08000970   0x0000000c   Code   RO         2664    i.EXTI9_5_IRQHandler  stm32f4xx_it.o
+    0x0800097c   0x00000002   Code   RO         2037    i.Error_Handler     main.o
+    0x0800097e   0x00000012   Code   RO         7590    i.FATFS_LinkDriver  ff_gen_drv.o
+    0x08000990   0x00000054   Code   RO         7591    i.FATFS_LinkDriverEx  ff_gen_drv.o
     0x080009e4   0x00000010   Code   RO           10    i.FreeRTOS_ClearARP  freertos_arp.o
-    0x080009f4   0x0000002c   Code   RO          312    i.FreeRTOS_GetAddressConfiguration  freertos_ip.o
-    0x08000a20   0x00000204   Code   RO          319    i.FreeRTOS_IPInit   freertos_ip.o
-    0x08000c24   0x00000028   Code   RO          321    i.FreeRTOS_NetworkDown  freertos_ip.o
+    0x080009f4   0x0000002c   Code   RO          233    i.FreeRTOS_GetAddressConfiguration  freertos_ip.o
+    0x08000a20   0x00000204   Code   RO          240    i.FreeRTOS_IPInit   freertos_ip.o
+    0x08000c24   0x00000028   Code   RO          242    i.FreeRTOS_NetworkDown  freertos_ip.o
     0x08000c4c   0x00000044   Code   RO           11    i.FreeRTOS_OutputARPRequest  freertos_arp.o
-    0x08000c90   0x00000118   Code   RO          581    i.FreeRTOS_accept   freertos_sockets.o
-    0x08000da8   0x0000008a   Code   RO          582    i.FreeRTOS_bind     freertos_sockets.o
-    0x08000e32   0x00000030   Code   RO          583    i.FreeRTOS_closesocket  freertos_sockets.o
-    0x08000e62   0x00000094   Code   RO          590    i.FreeRTOS_listen   freertos_sockets.o
-    0x08000ef6   0x0000000e   Code   RO          591    i.FreeRTOS_max_uint32  freertos_sockets.o
-    0x08000f04   0x0000000e   Code   RO         1185    i.FreeRTOS_min_int32  freertos_tcp_win.o
-    0x08000f12   0x0000000e   Code   RO          923    i.FreeRTOS_min_uint32  freertos_stream_buffer.o
-    0x08000f20   0x0000000e   Code   RO          959    i.FreeRTOS_min_uint32  freertos_tcp_ip.o
-    0x08000f2e   0x0000014c   Code   RO          595    i.FreeRTOS_recv     freertos_sockets.o
-    0x0800107a   0x0000000e   Code   RO          597    i.FreeRTOS_round_up  freertos_sockets.o
-    0x08001088   0x00000028   Code   RO          598    i.FreeRTOS_rx_size  freertos_sockets.o
-    0x080010b0   0x00000112   Code   RO          600    i.FreeRTOS_send     freertos_sockets.o
-    0x080011c2   0x0000029a   Code   RO          602    i.FreeRTOS_setsockopt  freertos_sockets.o
-    0x0800145c   0x00000048   Code   RO          603    i.FreeRTOS_shutdown  freertos_sockets.o
-    0x080014a4   0x000000ce   Code   RO          604    i.FreeRTOS_socket   freertos_sockets.o
-    0x08001572   0x00000028   Code   RO          605    i.FreeRTOS_tx_size  freertos_sockets.o
-    0x0800159a   0x00000028   Code   RO          606    i.FreeRTOS_tx_space  freertos_sockets.o
-    0x080015c2   0x00000028   Code   RO         3423    i.HAL_DMA_Abort_IT  stm32f4xx_hal_dma.o
-    0x080015ea   0x00000006   Code   RO         3425    i.HAL_DMA_GetError  stm32f4xx_hal_dma.o
-    0x080015f0   0x00000240   Code   RO         3427    i.HAL_DMA_IRQHandler  stm32f4xx_hal_dma.o
-    0x08001830   0x000000ec   Code   RO         3428    i.HAL_DMA_Init      stm32f4xx_hal_dma.o
-    0x0800191c   0x00000092   Code   RO         3432    i.HAL_DMA_Start_IT  stm32f4xx_hal_dma.o
+    0x08000c90   0x00000118   Code   RO          502    i.FreeRTOS_accept   freertos_sockets.o
+    0x08000da8   0x0000008a   Code   RO          503    i.FreeRTOS_bind     freertos_sockets.o
+    0x08000e32   0x00000030   Code   RO          504    i.FreeRTOS_closesocket  freertos_sockets.o
+    0x08000e62   0x00000094   Code   RO          511    i.FreeRTOS_listen   freertos_sockets.o
+    0x08000ef6   0x0000000e   Code   RO          512    i.FreeRTOS_max_uint32  freertos_sockets.o
+    0x08000f04   0x0000000e   Code   RO         1106    i.FreeRTOS_min_int32  freertos_tcp_win.o
+    0x08000f12   0x0000000e   Code   RO          844    i.FreeRTOS_min_uint32  freertos_stream_buffer.o
+    0x08000f20   0x0000000e   Code   RO          880    i.FreeRTOS_min_uint32  freertos_tcp_ip.o
+    0x08000f2e   0x0000014c   Code   RO          516    i.FreeRTOS_recv     freertos_sockets.o
+    0x0800107a   0x0000000e   Code   RO          518    i.FreeRTOS_round_up  freertos_sockets.o
+    0x08001088   0x00000028   Code   RO          519    i.FreeRTOS_rx_size  freertos_sockets.o
+    0x080010b0   0x00000112   Code   RO          521    i.FreeRTOS_send     freertos_sockets.o
+    0x080011c2   0x0000029a   Code   RO          523    i.FreeRTOS_setsockopt  freertos_sockets.o
+    0x0800145c   0x00000048   Code   RO          524    i.FreeRTOS_shutdown  freertos_sockets.o
+    0x080014a4   0x000000ce   Code   RO          525    i.FreeRTOS_socket   freertos_sockets.o
+    0x08001572   0x00000028   Code   RO          526    i.FreeRTOS_tx_size  freertos_sockets.o
+    0x0800159a   0x00000028   Code   RO          527    i.FreeRTOS_tx_space  freertos_sockets.o
+    0x080015c2   0x00000028   Code   RO         3353    i.HAL_DMA_Abort_IT  stm32f4xx_hal_dma.o
+    0x080015ea   0x00000006   Code   RO         3355    i.HAL_DMA_GetError  stm32f4xx_hal_dma.o
+    0x080015f0   0x00000240   Code   RO         3357    i.HAL_DMA_IRQHandler  stm32f4xx_hal_dma.o
+    0x08001830   0x000000ec   Code   RO         3358    i.HAL_DMA_Init      stm32f4xx_hal_dma.o
+    0x0800191c   0x00000092   Code   RO         3362    i.HAL_DMA_Start_IT  stm32f4xx_hal_dma.o
     0x080019ae   0x00000002   PAD
-    0x080019b0   0x00000028   Code   RO         3846    i.HAL_Delay         stm32f4xx_hal.o
-    0x080019d8   0x00000120   Code   RO         1722    i.HAL_ETH_ConfigMAC  stm32f4xx_hal_eth.o
-    0x08001af8   0x00000002   Code   RO         1726    i.HAL_ETH_ErrorCallback  stm32f4xx_hal_eth.o
+    0x080019b0   0x00000028   Code   RO         3776    i.HAL_Delay         stm32f4xx_hal.o
+    0x080019d8   0x00000120   Code   RO         1652    i.HAL_ETH_ConfigMAC  stm32f4xx_hal_eth.o
+    0x08001af8   0x00000002   Code   RO         1656    i.HAL_ETH_ErrorCallback  stm32f4xx_hal_eth.o
     0x08001afa   0x00000002   PAD
-    0x08001afc   0x00000050   Code   RO         1730    i.HAL_ETH_IRQHandler  stm32f4xx_hal_eth.o
-    0x08001b4c   0x00000108   Code   RO         1731    i.HAL_ETH_Init      stm32f4xx_hal_eth.o
-    0x08001c54   0x00000154   Code   RO         2236    i.HAL_ETH_MspInit   eth.o
-    0x08001da8   0x000000c4   Code   RO         1734    i.HAL_ETH_ReadPHYRegister  stm32f4xx_hal_eth.o
-    0x08001e6c   0x00000048   Code   RO         1474    i.HAL_ETH_RxCpltCallback  networkinterface.o
-    0x08001eb4   0x00000052   Code   RO         1736    i.HAL_ETH_Start     stm32f4xx_hal_eth.o
-    0x08001f06   0x00000052   Code   RO         1737    i.HAL_ETH_Stop      stm32f4xx_hal_eth.o
-    0x08001f58   0x00000002   Code   RO         1739    i.HAL_ETH_TxCpltCallback  stm32f4xx_hal_eth.o
+    0x08001afc   0x00000050   Code   RO         1660    i.HAL_ETH_IRQHandler  stm32f4xx_hal_eth.o
+    0x08001b4c   0x00000108   Code   RO         1661    i.HAL_ETH_Init      stm32f4xx_hal_eth.o
+    0x08001c54   0x00000154   Code   RO         2166    i.HAL_ETH_MspInit   eth.o
+    0x08001da8   0x000000c4   Code   RO         1664    i.HAL_ETH_ReadPHYRegister  stm32f4xx_hal_eth.o
+    0x08001e6c   0x00000048   Code   RO         1404    i.HAL_ETH_RxCpltCallback  networkinterface.o
+    0x08001eb4   0x00000052   Code   RO         1666    i.HAL_ETH_Start     stm32f4xx_hal_eth.o
+    0x08001f06   0x00000052   Code   RO         1667    i.HAL_ETH_Stop      stm32f4xx_hal_eth.o
+    0x08001f58   0x00000002   Code   RO         1669    i.HAL_ETH_TxCpltCallback  stm32f4xx_hal_eth.o
     0x08001f5a   0x00000002   PAD
-    0x08001f5c   0x000000c4   Code   RO         1740    i.HAL_ETH_WritePHYRegister  stm32f4xx_hal_eth.o
-    0x08002020   0x00000002   Code   RO         3313    i.HAL_GPIO_EXTI_Callback  stm32f4xx_hal_gpio.o
+    0x08001f5c   0x000000c4   Code   RO         1670    i.HAL_ETH_WritePHYRegister  stm32f4xx_hal_eth.o
+    0x08002020   0x00000002   Code   RO         3243    i.HAL_GPIO_EXTI_Callback  stm32f4xx_hal_gpio.o
     0x08002022   0x00000002   PAD
-    0x08002024   0x0000001c   Code   RO         3314    i.HAL_GPIO_EXTI_IRQHandler  stm32f4xx_hal_gpio.o
-    0x08002040   0x00000200   Code   RO         3315    i.HAL_GPIO_Init     stm32f4xx_hal_gpio.o
-    0x08002240   0x0000000c   Code   RO         3319    i.HAL_GPIO_WritePin  stm32f4xx_hal_gpio.o
-    0x0800224c   0x0000000c   Code   RO         3852    i.HAL_GetTick       stm32f4xx_hal.o
-    0x08002258   0x00000018   Code   RO         3858    i.HAL_IncTick       stm32f4xx_hal.o
-    0x08002270   0x0000003c   Code   RO         3859    i.HAL_Init          stm32f4xx_hal.o
-    0x080022ac   0x0000008c   Code   RO         2876    i.HAL_InitTick      stm32f4xx_hal_timebase_tim.o
-    0x08002338   0x00000054   Code   RO         2852    i.HAL_MspInit       stm32f4xx_hal_msp.o
-    0x0800238c   0x00000020   Code   RO         3704    i.HAL_NVIC_EnableIRQ  stm32f4xx_hal_cortex.o
-    0x080023ac   0x0000007c   Code   RO         3710    i.HAL_NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08002428   0x00000028   Code   RO         3711    i.HAL_NVIC_SetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x08002450   0x00000184   Code   RO         2916    i.HAL_RCC_ClockConfig  stm32f4xx_hal_rcc.o
-    0x080025d4   0x00000044   Code   RO         2920    i.HAL_RCC_GetClockConfig  stm32f4xx_hal_rcc.o
-    0x08002618   0x0000000c   Code   RO         2921    i.HAL_RCC_GetHCLKFreq  stm32f4xx_hal_rcc.o
-    0x08002624   0x00000020   Code   RO         2923    i.HAL_RCC_GetPCLK1Freq  stm32f4xx_hal_rcc.o
-    0x08002644   0x00000020   Code   RO         2924    i.HAL_RCC_GetPCLK2Freq  stm32f4xx_hal_rcc.o
-    0x08002664   0x000000b0   Code   RO         2925    i.HAL_RCC_GetSysClockFreq  stm32f4xx_hal_rcc.o
-    0x08002714   0x00000488   Code   RO         2928    i.HAL_RCC_OscConfig  stm32f4xx_hal_rcc.o
-    0x08002b9c   0x0000000a   Code   RO         2291    i.HAL_SD_AbortCallback  bsp_driver_sd.o
+    0x08002024   0x0000001c   Code   RO         3244    i.HAL_GPIO_EXTI_IRQHandler  stm32f4xx_hal_gpio.o
+    0x08002040   0x00000200   Code   RO         3245    i.HAL_GPIO_Init     stm32f4xx_hal_gpio.o
+    0x08002240   0x0000000c   Code   RO         3249    i.HAL_GPIO_WritePin  stm32f4xx_hal_gpio.o
+    0x0800224c   0x0000000c   Code   RO         3782    i.HAL_GetTick       stm32f4xx_hal.o
+    0x08002258   0x00000018   Code   RO         3788    i.HAL_IncTick       stm32f4xx_hal.o
+    0x08002270   0x0000003c   Code   RO         3789    i.HAL_Init          stm32f4xx_hal.o
+    0x080022ac   0x0000008c   Code   RO         2806    i.HAL_InitTick      stm32f4xx_hal_timebase_tim.o
+    0x08002338   0x00000054   Code   RO         2782    i.HAL_MspInit       stm32f4xx_hal_msp.o
+    0x0800238c   0x00000020   Code   RO         3634    i.HAL_NVIC_EnableIRQ  stm32f4xx_hal_cortex.o
+    0x080023ac   0x0000007c   Code   RO         3640    i.HAL_NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08002428   0x00000028   Code   RO         3641    i.HAL_NVIC_SetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x08002450   0x00000184   Code   RO         2846    i.HAL_RCC_ClockConfig  stm32f4xx_hal_rcc.o
+    0x080025d4   0x00000044   Code   RO         2850    i.HAL_RCC_GetClockConfig  stm32f4xx_hal_rcc.o
+    0x08002618   0x0000000c   Code   RO         2851    i.HAL_RCC_GetHCLKFreq  stm32f4xx_hal_rcc.o
+    0x08002624   0x00000020   Code   RO         2853    i.HAL_RCC_GetPCLK1Freq  stm32f4xx_hal_rcc.o
+    0x08002644   0x00000020   Code   RO         2854    i.HAL_RCC_GetPCLK2Freq  stm32f4xx_hal_rcc.o
+    0x08002664   0x000000b0   Code   RO         2855    i.HAL_RCC_GetSysClockFreq  stm32f4xx_hal_rcc.o
+    0x08002714   0x00000488   Code   RO         2858    i.HAL_RCC_OscConfig  stm32f4xx_hal_rcc.o
+    0x08002b9c   0x0000000a   Code   RO         2221    i.HAL_SD_AbortCallback  bsp_driver_sd.o
     0x08002ba6   0x00000002   PAD
-    0x08002ba8   0x000000a8   Code   RO         4376    i.HAL_SD_ConfigWideBusOperation  stm32f4xx_hal_sd.o
-    0x08002c50   0x00000002   Code   RO         4379    i.HAL_SD_ErrorCallback  stm32f4xx_hal_sd.o
+    0x08002ba8   0x000000a8   Code   RO         4306    i.HAL_SD_ConfigWideBusOperation  stm32f4xx_hal_sd.o
+    0x08002c50   0x00000002   Code   RO         4309    i.HAL_SD_ErrorCallback  stm32f4xx_hal_sd.o
     0x08002c52   0x00000002   PAD
-    0x08002c54   0x000001c8   Code   RO         4381    i.HAL_SD_GetCardCSD  stm32f4xx_hal_sd.o
-    0x08002e1c   0x00000026   Code   RO         4382    i.HAL_SD_GetCardInfo  stm32f4xx_hal_sd.o
-    0x08002e42   0x00000024   Code   RO         4383    i.HAL_SD_GetCardState  stm32f4xx_hal_sd.o
+    0x08002c54   0x000001c8   Code   RO         4311    i.HAL_SD_GetCardCSD  stm32f4xx_hal_sd.o
+    0x08002e1c   0x00000026   Code   RO         4312    i.HAL_SD_GetCardInfo  stm32f4xx_hal_sd.o
+    0x08002e42   0x00000024   Code   RO         4313    i.HAL_SD_GetCardState  stm32f4xx_hal_sd.o
     0x08002e66   0x00000002   PAD
-    0x08002e68   0x0000021c   Code   RO         4387    i.HAL_SD_IRQHandler  stm32f4xx_hal_sd.o
-    0x08003084   0x0000003c   Code   RO         4388    i.HAL_SD_Init       stm32f4xx_hal_sd.o
-    0x080030c0   0x00000084   Code   RO         4389    i.HAL_SD_InitCard   stm32f4xx_hal_sd.o
-    0x08003144   0x000001a8   Code   RO         2591    i.HAL_SD_MspInit    sdio.o
-    0x080032ec   0x00000154   Code   RO         4393    i.HAL_SD_ReadBlocks_DMA  stm32f4xx_hal_sd.o
-    0x08003440   0x0000000a   Code   RO         2292    i.HAL_SD_RxCpltCallback  bsp_driver_sd.o
-    0x0800344a   0x0000000a   Code   RO         2293    i.HAL_SD_TxCpltCallback  bsp_driver_sd.o
-    0x08003454   0x00000158   Code   RO         4398    i.HAL_SD_WriteBlocks_DMA  stm32f4xx_hal_sd.o
-    0x080035ac   0x00000002   Code   RO         5316    i.HAL_TIMEx_BreakCallback  stm32f4xx_hal_tim_ex.o
-    0x080035ae   0x00000002   Code   RO         5317    i.HAL_TIMEx_CommutCallback  stm32f4xx_hal_tim_ex.o
-    0x080035b0   0x000000b4   Code   RO         5334    i.HAL_TIMEx_MasterConfigSynchronization  stm32f4xx_hal_tim_ex.o
-    0x08003664   0x00000034   Code   RO         4630    i.HAL_TIM_Base_Init  stm32f4xx_hal_tim.o
-    0x08003698   0x00000048   Code   RO         2633    i.HAL_TIM_Base_MspInit  tim.o
-    0x080036e0   0x0000002a   Code   RO         4635    i.HAL_TIM_Base_Start_IT  stm32f4xx_hal_tim.o
-    0x0800370a   0x00000002   Code   RO         4659    i.HAL_TIM_IC_CaptureCallback  stm32f4xx_hal_tim.o
-    0x0800370c   0x00000196   Code   RO         4673    i.HAL_TIM_IRQHandler  stm32f4xx_hal_tim.o
-    0x080038a2   0x00000002   Code   RO         4676    i.HAL_TIM_OC_DelayElapsedCallback  stm32f4xx_hal_tim.o
-    0x080038a4   0x00000002   Code   RO         4703    i.HAL_TIM_PWM_PulseFinishedCallback  stm32f4xx_hal_tim.o
+    0x08002e68   0x0000021c   Code   RO         4317    i.HAL_SD_IRQHandler  stm32f4xx_hal_sd.o
+    0x08003084   0x0000003c   Code   RO         4318    i.HAL_SD_Init       stm32f4xx_hal_sd.o
+    0x080030c0   0x00000084   Code   RO         4319    i.HAL_SD_InitCard   stm32f4xx_hal_sd.o
+    0x08003144   0x000001a8   Code   RO         2521    i.HAL_SD_MspInit    sdio.o
+    0x080032ec   0x00000154   Code   RO         4323    i.HAL_SD_ReadBlocks_DMA  stm32f4xx_hal_sd.o
+    0x08003440   0x0000000a   Code   RO         2222    i.HAL_SD_RxCpltCallback  bsp_driver_sd.o
+    0x0800344a   0x0000000a   Code   RO         2223    i.HAL_SD_TxCpltCallback  bsp_driver_sd.o
+    0x08003454   0x00000158   Code   RO         4328    i.HAL_SD_WriteBlocks_DMA  stm32f4xx_hal_sd.o
+    0x080035ac   0x00000002   Code   RO         5246    i.HAL_TIMEx_BreakCallback  stm32f4xx_hal_tim_ex.o
+    0x080035ae   0x00000002   Code   RO         5247    i.HAL_TIMEx_CommutCallback  stm32f4xx_hal_tim_ex.o
+    0x080035b0   0x000000b4   Code   RO         5264    i.HAL_TIMEx_MasterConfigSynchronization  stm32f4xx_hal_tim_ex.o
+    0x08003664   0x00000034   Code   RO         4560    i.HAL_TIM_Base_Init  stm32f4xx_hal_tim.o
+    0x08003698   0x00000048   Code   RO         2563    i.HAL_TIM_Base_MspInit  tim.o
+    0x080036e0   0x0000002a   Code   RO         4565    i.HAL_TIM_Base_Start_IT  stm32f4xx_hal_tim.o
+    0x0800370a   0x00000002   Code   RO         4589    i.HAL_TIM_IC_CaptureCallback  stm32f4xx_hal_tim.o
+    0x0800370c   0x00000196   Code   RO         4603    i.HAL_TIM_IRQHandler  stm32f4xx_hal_tim.o
+    0x080038a2   0x00000002   Code   RO         4606    i.HAL_TIM_OC_DelayElapsedCallback  stm32f4xx_hal_tim.o
+    0x080038a4   0x00000002   Code   RO         4633    i.HAL_TIM_PWM_PulseFinishedCallback  stm32f4xx_hal_tim.o
     0x080038a6   0x00000002   PAD
-    0x080038a8   0x00000018   Code   RO         2108    i.HAL_TIM_PeriodElapsedCallback  main.o
-    0x080038c0   0x00000002   Code   RO         4716    i.HAL_TIM_TriggerCallback  stm32f4xx_hal_tim.o
-    0x080038c2   0x00000002   Code   RO         5588    i.HAL_UART_ErrorCallback  stm32f4xx_hal_uart.o
-    0x080038c4   0x00000154   Code   RO         5591    i.HAL_UART_IRQHandler  stm32f4xx_hal_uart.o
-    0x08003a18   0x00000072   Code   RO         5592    i.HAL_UART_Init     stm32f4xx_hal_uart.o
+    0x080038a8   0x00000018   Code   RO         2038    i.HAL_TIM_PeriodElapsedCallback  main.o
+    0x080038c0   0x00000002   Code   RO         4646    i.HAL_TIM_TriggerCallback  stm32f4xx_hal_tim.o
+    0x080038c2   0x00000002   Code   RO         5518    i.HAL_UART_ErrorCallback  stm32f4xx_hal_uart.o
+    0x080038c4   0x00000154   Code   RO         5521    i.HAL_UART_IRQHandler  stm32f4xx_hal_uart.o
+    0x08003a18   0x00000072   Code   RO         5522    i.HAL_UART_Init     stm32f4xx_hal_uart.o
     0x08003a8a   0x00000002   PAD
-    0x08003a8c   0x00000228   Code   RO         2675    i.HAL_UART_MspInit  usart.o
-    0x08003cb4   0x00000002   Code   RO         5598    i.HAL_UART_RxCpltCallback  stm32f4xx_hal_uart.o
-    0x08003cb6   0x00000002   Code   RO         5603    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
-    0x08003cb8   0x00000004   Code   RO         2735    i.HardFault_Handler  stm32f4xx_it.o
-    0x08003cbc   0x00000068   Code   RO         2211    i.MX_DMA_Init       dma.o
-    0x08003d24   0x0000001c   Code   RO         2485    i.MX_FATFS_Init     fatfs.o
-    0x08003d40   0x00000028   Code   RO         2522    i.MX_FREERTOS_Init  freertos.o
-    0x08003d68   0x00000184   Code   RO         2187    i.MX_GPIO_Init      gpio.o
-    0x08003eec   0x00000024   Code   RO         2592    i.MX_SDIO_SD_Init   sdio.o
-    0x08003f10   0x0000004c   Code   RO         2634    i.MX_TIM6_Init      tim.o
-    0x08003f5c   0x00000038   Code   RO         2676    i.MX_USART1_UART_Init  usart.o
-    0x08003f94   0x00000038   Code   RO         2677    i.MX_USART2_UART_Init  usart.o
-    0x08003fcc   0x00000038   Code   RO         2678    i.MX_USART3_UART_Init  usart.o
-    0x08004004   0x00000004   Code   RO         2736    i.MemManage_Handler  stm32f4xx_it.o
-    0x08004008   0x00000002   Code   RO         2737    i.NMI_Handler       stm32f4xx_it.o
-    0x0800400a   0x0000002c   Code   RO         4097    i.SDIO_ConfigData   stm32f4xx_ll_sdmmc.o
-    0x08004036   0x00000008   Code   RO         4098    i.SDIO_GetCommandResponse  stm32f4xx_ll_sdmmc.o
-    0x0800403e   0x0000000a   Code   RO         4101    i.SDIO_GetPowerState  stm32f4xx_ll_sdmmc.o
-    0x08004048   0x0000000c   Code   RO         4102    i.SDIO_GetResponse  stm32f4xx_ll_sdmmc.o
-    0x08004054   0x00000010   Code   RO         2738    i.SDIO_IRQHandler   stm32f4xx_it.o
-    0x08004064   0x00000034   Code   RO         4103    i.SDIO_Init         stm32f4xx_ll_sdmmc.o
-    0x08004098   0x00000012   Code   RO         4105    i.SDIO_PowerState_ON  stm32f4xx_ll_sdmmc.o
-    0x080040aa   0x00000008   Code   RO         4106    i.SDIO_ReadFIFO     stm32f4xx_ll_sdmmc.o
-    0x080040b2   0x00000028   Code   RO         4107    i.SDIO_SendCommand  stm32f4xx_ll_sdmmc.o
-    0x080040da   0x0000000c   Code   RO         4109    i.SDIO_WriteFIFO    stm32f4xx_ll_sdmmc.o
-    0x080040e6   0x00000038   Code   RO         4110    i.SDMMC_CmdAppCommand  stm32f4xx_ll_sdmmc.o
+    0x08003a8c   0x00000228   Code   RO         2605    i.HAL_UART_MspInit  usart.o
+    0x08003cb4   0x00000002   Code   RO         5528    i.HAL_UART_RxCpltCallback  stm32f4xx_hal_uart.o
+    0x08003cb6   0x00000002   Code   RO         5533    i.HAL_UART_TxCpltCallback  stm32f4xx_hal_uart.o
+    0x08003cb8   0x00000004   Code   RO         2665    i.HardFault_Handler  stm32f4xx_it.o
+    0x08003cbc   0x00000068   Code   RO         2141    i.MX_DMA_Init       dma.o
+    0x08003d24   0x0000001c   Code   RO         2415    i.MX_FATFS_Init     fatfs.o
+    0x08003d40   0x00000028   Code   RO         2452    i.MX_FREERTOS_Init  freertos.o
+    0x08003d68   0x00000184   Code   RO         2117    i.MX_GPIO_Init      gpio.o
+    0x08003eec   0x00000024   Code   RO         2522    i.MX_SDIO_SD_Init   sdio.o
+    0x08003f10   0x0000004c   Code   RO         2564    i.MX_TIM6_Init      tim.o
+    0x08003f5c   0x00000038   Code   RO         2606    i.MX_USART1_UART_Init  usart.o
+    0x08003f94   0x00000038   Code   RO         2607    i.MX_USART2_UART_Init  usart.o
+    0x08003fcc   0x00000038   Code   RO         2608    i.MX_USART3_UART_Init  usart.o
+    0x08004004   0x00000004   Code   RO         2666    i.MemManage_Handler  stm32f4xx_it.o
+    0x08004008   0x00000002   Code   RO         2667    i.NMI_Handler       stm32f4xx_it.o
+    0x0800400a   0x0000002c   Code   RO         4027    i.SDIO_ConfigData   stm32f4xx_ll_sdmmc.o
+    0x08004036   0x00000008   Code   RO         4028    i.SDIO_GetCommandResponse  stm32f4xx_ll_sdmmc.o
+    0x0800403e   0x0000000a   Code   RO         4031    i.SDIO_GetPowerState  stm32f4xx_ll_sdmmc.o
+    0x08004048   0x0000000c   Code   RO         4032    i.SDIO_GetResponse  stm32f4xx_ll_sdmmc.o
+    0x08004054   0x00000010   Code   RO         2668    i.SDIO_IRQHandler   stm32f4xx_it.o
+    0x08004064   0x00000034   Code   RO         4033    i.SDIO_Init         stm32f4xx_ll_sdmmc.o
+    0x08004098   0x00000012   Code   RO         4035    i.SDIO_PowerState_ON  stm32f4xx_ll_sdmmc.o
+    0x080040aa   0x00000008   Code   RO         4036    i.SDIO_ReadFIFO     stm32f4xx_ll_sdmmc.o
+    0x080040b2   0x00000028   Code   RO         4037    i.SDIO_SendCommand  stm32f4xx_ll_sdmmc.o
+    0x080040da   0x0000000c   Code   RO         4039    i.SDIO_WriteFIFO    stm32f4xx_ll_sdmmc.o
+    0x080040e6   0x00000038   Code   RO         4040    i.SDMMC_CmdAppCommand  stm32f4xx_ll_sdmmc.o
     0x0800411e   0x00000002   PAD
-    0x08004120   0x0000003c   Code   RO         4111    i.SDMMC_CmdAppOperCommand  stm32f4xx_ll_sdmmc.o
-    0x0800415c   0x00000038   Code   RO         4112    i.SDMMC_CmdBlockLength  stm32f4xx_ll_sdmmc.o
-    0x08004194   0x00000038   Code   RO         4113    i.SDMMC_CmdBusWidth  stm32f4xx_ll_sdmmc.o
-    0x080041cc   0x0000002c   Code   RO         4117    i.SDMMC_CmdGoIdleState  stm32f4xx_ll_sdmmc.o
-    0x080041f8   0x00000034   Code   RO         4119    i.SDMMC_CmdOperCond  stm32f4xx_ll_sdmmc.o
-    0x0800422c   0x00000038   Code   RO         4120    i.SDMMC_CmdReadMultiBlock  stm32f4xx_ll_sdmmc.o
-    0x08004264   0x00000038   Code   RO         4121    i.SDMMC_CmdReadSingleBlock  stm32f4xx_ll_sdmmc.o
-    0x0800429c   0x0000003a   Code   RO         4124    i.SDMMC_CmdSelDesel  stm32f4xx_ll_sdmmc.o
-    0x080042d6   0x00000032   Code   RO         4125    i.SDMMC_CmdSendCID  stm32f4xx_ll_sdmmc.o
-    0x08004308   0x00000032   Code   RO         4126    i.SDMMC_CmdSendCSD  stm32f4xx_ll_sdmmc.o
-    0x0800433a   0x00000038   Code   RO         4127    i.SDMMC_CmdSendSCR  stm32f4xx_ll_sdmmc.o
-    0x08004372   0x00000038   Code   RO         4128    i.SDMMC_CmdSendStatus  stm32f4xx_ll_sdmmc.o
-    0x080043aa   0x00000038   Code   RO         4129    i.SDMMC_CmdSetRelAdd  stm32f4xx_ll_sdmmc.o
+    0x08004120   0x0000003c   Code   RO         4041    i.SDMMC_CmdAppOperCommand  stm32f4xx_ll_sdmmc.o
+    0x0800415c   0x00000038   Code   RO         4042    i.SDMMC_CmdBlockLength  stm32f4xx_ll_sdmmc.o
+    0x08004194   0x00000038   Code   RO         4043    i.SDMMC_CmdBusWidth  stm32f4xx_ll_sdmmc.o
+    0x080041cc   0x0000002c   Code   RO         4047    i.SDMMC_CmdGoIdleState  stm32f4xx_ll_sdmmc.o
+    0x080041f8   0x00000034   Code   RO         4049    i.SDMMC_CmdOperCond  stm32f4xx_ll_sdmmc.o
+    0x0800422c   0x00000038   Code   RO         4050    i.SDMMC_CmdReadMultiBlock  stm32f4xx_ll_sdmmc.o
+    0x08004264   0x00000038   Code   RO         4051    i.SDMMC_CmdReadSingleBlock  stm32f4xx_ll_sdmmc.o
+    0x0800429c   0x0000003a   Code   RO         4054    i.SDMMC_CmdSelDesel  stm32f4xx_ll_sdmmc.o
+    0x080042d6   0x00000032   Code   RO         4055    i.SDMMC_CmdSendCID  stm32f4xx_ll_sdmmc.o
+    0x08004308   0x00000032   Code   RO         4056    i.SDMMC_CmdSendCSD  stm32f4xx_ll_sdmmc.o
+    0x0800433a   0x00000038   Code   RO         4057    i.SDMMC_CmdSendSCR  stm32f4xx_ll_sdmmc.o
+    0x08004372   0x00000038   Code   RO         4058    i.SDMMC_CmdSendStatus  stm32f4xx_ll_sdmmc.o
+    0x080043aa   0x00000038   Code   RO         4059    i.SDMMC_CmdSetRelAdd  stm32f4xx_ll_sdmmc.o
     0x080043e2   0x00000002   PAD
-    0x080043e4   0x0000003c   Code   RO         4131    i.SDMMC_CmdStopTransfer  stm32f4xx_ll_sdmmc.o
-    0x08004420   0x00000038   Code   RO         4133    i.SDMMC_CmdWriteMultiBlock  stm32f4xx_ll_sdmmc.o
-    0x08004458   0x00000038   Code   RO         4134    i.SDMMC_CmdWriteSingleBlock  stm32f4xx_ll_sdmmc.o
-    0x08004490   0x00000040   Code   RO         4135    i.SDMMC_GetCmdError  stm32f4xx_ll_sdmmc.o
-    0x080044d0   0x000001ac   Code   RO         4136    i.SDMMC_GetCmdResp1  stm32f4xx_ll_sdmmc.o
-    0x0800467c   0x00000064   Code   RO         4137    i.SDMMC_GetCmdResp2  stm32f4xx_ll_sdmmc.o
-    0x080046e0   0x00000058   Code   RO         4138    i.SDMMC_GetCmdResp3  stm32f4xx_ll_sdmmc.o
-    0x08004738   0x000000b8   Code   RO         4139    i.SDMMC_GetCmdResp6  stm32f4xx_ll_sdmmc.o
-    0x080047f0   0x0000006c   Code   RO         4140    i.SDMMC_GetCmdResp7  stm32f4xx_ll_sdmmc.o
-    0x0800485c   0x00000028   Code   RO         2400    i.SD_CheckStatus    sd_diskio.o
-    0x08004884   0x00000026   Code   RO         2401    i.SD_CheckStatusWithTimeout  sd_diskio.o
+    0x080043e4   0x0000003c   Code   RO         4061    i.SDMMC_CmdStopTransfer  stm32f4xx_ll_sdmmc.o
+    0x08004420   0x00000038   Code   RO         4063    i.SDMMC_CmdWriteMultiBlock  stm32f4xx_ll_sdmmc.o
+    0x08004458   0x00000038   Code   RO         4064    i.SDMMC_CmdWriteSingleBlock  stm32f4xx_ll_sdmmc.o
+    0x08004490   0x00000040   Code   RO         4065    i.SDMMC_GetCmdError  stm32f4xx_ll_sdmmc.o
+    0x080044d0   0x000001ac   Code   RO         4066    i.SDMMC_GetCmdResp1  stm32f4xx_ll_sdmmc.o
+    0x0800467c   0x00000064   Code   RO         4067    i.SDMMC_GetCmdResp2  stm32f4xx_ll_sdmmc.o
+    0x080046e0   0x00000058   Code   RO         4068    i.SDMMC_GetCmdResp3  stm32f4xx_ll_sdmmc.o
+    0x08004738   0x000000b8   Code   RO         4069    i.SDMMC_GetCmdResp6  stm32f4xx_ll_sdmmc.o
+    0x080047f0   0x0000006c   Code   RO         4070    i.SDMMC_GetCmdResp7  stm32f4xx_ll_sdmmc.o
+    0x0800485c   0x00000028   Code   RO         2330    i.SD_CheckStatus    sd_diskio.o
+    0x08004884   0x00000026   Code   RO         2331    i.SD_CheckStatusWithTimeout  sd_diskio.o
     0x080048aa   0x00000002   PAD
-    0x080048ac   0x00000074   Code   RO         4400    i.SD_DMAError       stm32f4xx_hal_sd.o
-    0x08004920   0x00000048   Code   RO         4401    i.SD_DMAReceiveCplt  stm32f4xx_hal_sd.o
-    0x08004968   0x00000048   Code   RO         4402    i.SD_DMARxAbort     stm32f4xx_hal_sd.o
-    0x080049b0   0x00000012   Code   RO         4403    i.SD_DMATransmitCplt  stm32f4xx_hal_sd.o
-    0x080049c2   0x00000048   Code   RO         4404    i.SD_DMATxAbort     stm32f4xx_hal_sd.o
-    0x08004a0a   0x00000134   Code   RO         4405    i.SD_FindSCR        stm32f4xx_hal_sd.o
-    0x08004b3e   0x00000102   Code   RO         4406    i.SD_InitCard       stm32f4xx_hal_sd.o
-    0x08004c40   0x000000cc   Code   RO         4408    i.SD_PowerON        stm32f4xx_hal_sd.o
-    0x08004d0c   0x0000004a   Code   RO         4409    i.SD_Read_IT        stm32f4xx_hal_sd.o
-    0x08004d56   0x00000030   Code   RO         4411    i.SD_SendStatus     stm32f4xx_hal_sd.o
-    0x08004d86   0x00000068   Code   RO         4412    i.SD_WideBus_Disable  stm32f4xx_hal_sd.o
-    0x08004dee   0x00000068   Code   RO         4413    i.SD_WideBus_Enable  stm32f4xx_hal_sd.o
-    0x08004e56   0x00000054   Code   RO         4414    i.SD_Write_IT       stm32f4xx_hal_sd.o
+    0x080048ac   0x00000074   Code   RO         4330    i.SD_DMAError       stm32f4xx_hal_sd.o
+    0x08004920   0x00000048   Code   RO         4331    i.SD_DMAReceiveCplt  stm32f4xx_hal_sd.o
+    0x08004968   0x00000048   Code   RO         4332    i.SD_DMARxAbort     stm32f4xx_hal_sd.o
+    0x080049b0   0x00000012   Code   RO         4333    i.SD_DMATransmitCplt  stm32f4xx_hal_sd.o
+    0x080049c2   0x00000048   Code   RO         4334    i.SD_DMATxAbort     stm32f4xx_hal_sd.o
+    0x08004a0a   0x00000134   Code   RO         4335    i.SD_FindSCR        stm32f4xx_hal_sd.o
+    0x08004b3e   0x00000102   Code   RO         4336    i.SD_InitCard       stm32f4xx_hal_sd.o
+    0x08004c40   0x000000cc   Code   RO         4338    i.SD_PowerON        stm32f4xx_hal_sd.o
+    0x08004d0c   0x0000004a   Code   RO         4339    i.SD_Read_IT        stm32f4xx_hal_sd.o
+    0x08004d56   0x00000030   Code   RO         4341    i.SD_SendStatus     stm32f4xx_hal_sd.o
+    0x08004d86   0x00000068   Code   RO         4342    i.SD_WideBus_Disable  stm32f4xx_hal_sd.o
+    0x08004dee   0x00000068   Code   RO         4343    i.SD_WideBus_Enable  stm32f4xx_hal_sd.o
+    0x08004e56   0x00000054   Code   RO         4344    i.SD_Write_IT       stm32f4xx_hal_sd.o
     0x08004eaa   0x00000002   PAD
-    0x08004eac   0x0000006c   Code   RO         2402    i.SD_initialize     sd_diskio.o
-    0x08004f18   0x0000006c   Code   RO         2403    i.SD_ioctl          sd_diskio.o
-    0x08004f84   0x00000084   Code   RO         2404    i.SD_read           sd_diskio.o
-    0x08005008   0x0000000c   Code   RO         2405    i.SD_status         sd_diskio.o
-    0x08005014   0x00000080   Code   RO         2406    i.SD_write          sd_diskio.o
-    0x08005094   0x00000034   Code   RO         7159    i.SysTick_Handler   port.o
-    0x080050c8   0x000000b4   Code   RO         2109    i.SystemClock_Config  main.o
-    0x0800517c   0x0000001c   Code   RO         5899    i.SystemInit        system_stm32f4xx.o
-    0x08005198   0x00000010   Code   RO         2739    i.TIM1_UP_TIM10_IRQHandler  stm32f4xx_it.o
-    0x080051a8   0x00000010   Code   RO         2740    i.TIM6_DAC_IRQHandler  stm32f4xx_it.o
-    0x080051b8   0x000000d8   Code   RO         4718    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
-    0x08005290   0x00000014   Code   RO         5605    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
-    0x080052a4   0x00000020   Code   RO         5615    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
-    0x080052c4   0x00000020   Code   RO         5616    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
-    0x080052e4   0x000000a6   Code   RO         5618    i.UART_Receive_IT   stm32f4xx_hal_uart.o
+    0x08004eac   0x0000006c   Code   RO         2332    i.SD_initialize     sd_diskio.o
+    0x08004f18   0x0000006c   Code   RO         2333    i.SD_ioctl          sd_diskio.o
+    0x08004f84   0x00000084   Code   RO         2334    i.SD_read           sd_diskio.o
+    0x08005008   0x0000000c   Code   RO         2335    i.SD_status         sd_diskio.o
+    0x08005014   0x00000080   Code   RO         2336    i.SD_write          sd_diskio.o
+    0x08005094   0x00000034   Code   RO         7089    i.SysTick_Handler   port.o
+    0x080050c8   0x000000b4   Code   RO         2039    i.SystemClock_Config  main.o
+    0x0800517c   0x0000001c   Code   RO         5829    i.SystemInit        system_stm32f4xx.o
+    0x08005198   0x00000010   Code   RO         2669    i.TIM1_UP_TIM10_IRQHandler  stm32f4xx_it.o
+    0x080051a8   0x00000010   Code   RO         2670    i.TIM6_DAC_IRQHandler  stm32f4xx_it.o
+    0x080051b8   0x000000d8   Code   RO         4648    i.TIM_Base_SetConfig  stm32f4xx_hal_tim.o
+    0x08005290   0x00000014   Code   RO         5535    i.UART_DMAAbortOnError  stm32f4xx_hal_uart.o
+    0x080052a4   0x00000020   Code   RO         5545    i.UART_EndRxTransfer  stm32f4xx_hal_uart.o
+    0x080052c4   0x00000020   Code   RO         5546    i.UART_EndTransmit_IT  stm32f4xx_hal_uart.o
+    0x080052e4   0x000000a6   Code   RO         5548    i.UART_Receive_IT   stm32f4xx_hal_uart.o
     0x0800538a   0x00000002   PAD
-    0x0800538c   0x000003e8   Code   RO         5619    i.UART_SetConfig    stm32f4xx_hal_uart.o
-    0x08005774   0x00000068   Code   RO         5620    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
-    0x080057dc   0x00000010   Code   RO         2741    i.USART1_IRQHandler  stm32f4xx_it.o
-    0x080057ec   0x00000010   Code   RO         2742    i.USART2_IRQHandler  stm32f4xx_it.o
-    0x080057fc   0x00000010   Code   RO         2743    i.USART3_IRQHandler  stm32f4xx_it.o
-    0x0800580c   0x00000004   Code   RO         2744    i.UsageFault_Handler  stm32f4xx_it.o
-    0x08005810   0x00000028   Code   RO         7941    i.__0sprintf$6      mc_w.l(printf6.o)
-    0x08005838   0x00000010   Code   RO         3717    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
-    0x08005848   0x00000028   Code   RO         3718    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
-    0x08005870   0x0000000e   Code   RO         8091    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800587e   0x00000002   Code   RO         8092    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08005880   0x0000000e   Code   RO         8093    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800538c   0x000003e8   Code   RO         5549    i.UART_SetConfig    stm32f4xx_hal_uart.o
+    0x08005774   0x00000068   Code   RO         5550    i.UART_Transmit_IT  stm32f4xx_hal_uart.o
+    0x080057dc   0x00000010   Code   RO         2671    i.USART1_IRQHandler  stm32f4xx_it.o
+    0x080057ec   0x00000010   Code   RO         2672    i.USART2_IRQHandler  stm32f4xx_it.o
+    0x080057fc   0x00000010   Code   RO         2673    i.USART3_IRQHandler  stm32f4xx_it.o
+    0x0800580c   0x00000004   Code   RO         2674    i.UsageFault_Handler  stm32f4xx_it.o
+    0x08005810   0x00000028   Code   RO         7869    i.__0sprintf$6      mc_w.l(printf6.o)
+    0x08005838   0x00000010   Code   RO         3647    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
+    0x08005848   0x00000028   Code   RO         3648    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
+    0x08005870   0x0000000e   Code   RO         8019    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800587e   0x00000002   Code   RO         8020    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08005880   0x0000000e   Code   RO         8021    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0800588e   0x00000002   PAD
-    0x08005890   0x000002f0   Code   RO         7946    i._printf_core      mc_w.l(printf6.o)
-    0x08005b80   0x00000024   Code   RO         7947    i._printf_post_padding  mc_w.l(printf6.o)
-    0x08005ba4   0x0000002e   Code   RO         7948    i._printf_pre_padding  mc_w.l(printf6.o)
-    0x08005bd2   0x0000000a   Code   RO         7950    i._sputc            mc_w.l(printf6.o)
+    0x08005890   0x000002f0   Code   RO         7874    i._printf_core      mc_w.l(printf6.o)
+    0x08005b80   0x00000024   Code   RO         7875    i._printf_post_padding  mc_w.l(printf6.o)
+    0x08005ba4   0x0000002e   Code   RO         7876    i._printf_pre_padding  mc_w.l(printf6.o)
+    0x08005bd2   0x0000000a   Code   RO         7878    i._sputc            mc_w.l(printf6.o)
     0x08005bdc   0x00000084   Code   RO           12    i.eARPGetCacheEntry  freertos_arp.o
     0x08005c60   0x000000a4   Code   RO           13    i.eARPProcessPacket  freertos_arp.o
-    0x08005d04   0x00000010   Code   RO         6737    i.inHandlerMode     cmsis_os.o
-    0x08005d14   0x0000008e   Code   RO          608    i.lTCPAddRxdata     freertos_sockets.o
-    0x08005da2   0x0000000a   Code   RO         1186    i.lTCPIncrementTxPosition  freertos_tcp_win.o
-    0x08005dac   0x00000178   Code   RO         1187    i.lTCPWindowRxCheck  freertos_tcp_win.o
-    0x08005f24   0x00000124   Code   RO         1188    i.lTCPWindowTxAdd   freertos_tcp_win.o
-    0x08006048   0x00000006   Code   RO         1475    i.lUDPLoggingPrintf  networkinterface.o
+    0x08005d04   0x00000010   Code   RO         6667    i.inHandlerMode     cmsis_os.o
+    0x08005d14   0x0000008e   Code   RO          529    i.lTCPAddRxdata     freertos_sockets.o
+    0x08005da2   0x0000000a   Code   RO         1107    i.lTCPIncrementTxPosition  freertos_tcp_win.o
+    0x08005dac   0x00000178   Code   RO         1108    i.lTCPWindowRxCheck  freertos_tcp_win.o
+    0x08005f24   0x00000124   Code   RO         1109    i.lTCPWindowTxAdd   freertos_tcp_win.o
+    0x08006048   0x00000006   Code   RO         1405    i.lUDPLoggingPrintf  networkinterface.o
     0x0800604e   0x00000002   PAD
-    0x08006050   0x00000060   Code   RO         2110    i.main              main.o
-    0x080060b0   0x0000000e   Code   RO         6739    i.makeFreeRtosPriority  cmsis_os.o
-    0x080060be   0x00000012   Code   RO         6743    i.osKernelRunning   cmsis_os.o
-    0x080060d0   0x0000000a   Code   RO         6744    i.osKernelStart     cmsis_os.o
-    0x080060da   0x00000014   Code   RO         6745    i.osKernelSysTick   cmsis_os.o
-    0x080060ee   0x00000028   Code   RO         6753    i.osMessageCreate   cmsis_os.o
+    0x08006050   0x00000060   Code   RO         2040    i.main              main.o
+    0x080060b0   0x0000000e   Code   RO         6669    i.makeFreeRtosPriority  cmsis_os.o
+    0x080060be   0x00000012   Code   RO         6673    i.osKernelRunning   cmsis_os.o
+    0x080060d0   0x0000000a   Code   RO         6674    i.osKernelStart     cmsis_os.o
+    0x080060da   0x00000014   Code   RO         6675    i.osKernelSysTick   cmsis_os.o
+    0x080060ee   0x00000028   Code   RO         6683    i.osMessageCreate   cmsis_os.o
     0x08006116   0x00000002   PAD
-    0x08006118   0x0000009c   Code   RO         6755    i.osMessageGet      cmsis_os.o
-    0x080061b4   0x00000060   Code   RO         6757    i.osMessagePut      cmsis_os.o
-    0x08006214   0x0000005e   Code   RO         6778    i.osThreadCreate    cmsis_os.o
+    0x08006118   0x0000009c   Code   RO         6685    i.osMessageGet      cmsis_os.o
+    0x080061b4   0x00000060   Code   RO         6687    i.osMessagePut      cmsis_os.o
+    0x08006214   0x0000005e   Code   RO         6708    i.osThreadCreate    cmsis_os.o
     0x08006272   0x00000002   PAD
-    0x08006274   0x00000098   Code   RO         6422    i.prvAddCurrentTaskToDelayedList  tasks.o
-    0x0800630c   0x000000b4   Code   RO         6423    i.prvAddNewTaskToReadyList  tasks.o
-    0x080063c0   0x00000058   Code   RO          331    i.prvAllowIPPacket  freertos_ip.o
+    0x08006274   0x00000098   Code   RO         6352    i.prvAddCurrentTaskToDelayedList  tasks.o
+    0x0800630c   0x000000b4   Code   RO         6353    i.prvAddNewTaskToReadyList  tasks.o
+    0x080063c0   0x00000058   Code   RO          252    i.prvAllowIPPacket  freertos_ip.o
     0x08006418   0x00000050   Code   RO           14    i.prvCacheLookup    freertos_arp.o
-    0x08006468   0x00000030   Code   RO          332    i.prvCalculateSleepTime  freertos_ip.o
-    0x08006498   0x0000005c   Code   RO          333    i.prvCheckNetworkTimers  freertos_ip.o
-    0x080064f4   0x0000005a   Code   RO          960    i.prvCheckOptions   freertos_tcp_ip.o
-    0x0800654e   0x00000078   Code   RO          961    i.prvCheckRxData    freertos_tcp_ip.o
+    0x08006468   0x00000030   Code   RO          253    i.prvCalculateSleepTime  freertos_ip.o
+    0x08006498   0x0000005c   Code   RO          254    i.prvCheckNetworkTimers  freertos_ip.o
+    0x080064f4   0x0000005a   Code   RO          881    i.prvCheckOptions   freertos_tcp_ip.o
+    0x0800654e   0x00000078   Code   RO          882    i.prvCheckRxData    freertos_tcp_ip.o
     0x080065c6   0x00000002   PAD
-    0x080065c8   0x00000048   Code   RO         6424    i.prvCheckTasksWaitingTermination  tasks.o
-    0x08006610   0x000000d4   Code   RO         2524    i.prvConnectionListeningTask  freertos.o
-    0x080066e4   0x0000002a   Code   RO         6076    i.prvCopyDataFromQueue  queue.o
-    0x0800670e   0x0000007e   Code   RO         6077    i.prvCopyDataToQueue  queue.o
-    0x0800678c   0x0000007c   Code   RO         1189    i.prvCreateSectors  freertos_tcp_win.o
-    0x08006808   0x00000054   Code   RO         1476    i.prvDMARxDescListInit  networkinterface.o
-    0x0800685c   0x0000005c   Code   RO         1477    i.prvDMATxDescListInit  networkinterface.o
-    0x080068b8   0x00000050   Code   RO         6425    i.prvDeleteTCB      tasks.o
-    0x08006908   0x00000104   Code   RO          609    i.prvDetermineSocketSize  freertos_sockets.o
-    0x08006a0c   0x00000108   Code   RO         1478    i.prvEMACHandlerTask  networkinterface.o
-    0x08006b14   0x0000013c   Code   RO         1479    i.prvEthernetUpdateConfig  networkinterface.o
-    0x08006c50   0x00000014   Code   RO         6078    i.prvGetDisinheritPriorityAfterTimeout  queue.o
-    0x08006c64   0x00000068   Code   RO          611    i.prvGetPrivatePortNumber  freertos_sockets.o
-    0x08006ccc   0x000001b8   Code   RO          962    i.prvHandleEstablished  freertos_tcp_ip.o
-    0x08006e84   0x0000000c   Code   RO          334    i.prvHandleEthernetPacket  freertos_ip.o
-    0x08006e90   0x00000124   Code   RO          963    i.prvHandleListen   freertos_tcp_ip.o
-    0x08006fb4   0x00000122   Code   RO          964    i.prvHandleSynReceived  freertos_tcp_ip.o
+    0x080065c8   0x00000048   Code   RO         6354    i.prvCheckTasksWaitingTermination  tasks.o
+    0x08006610   0x000000d4   Code   RO         2454    i.prvConnectionListeningTask  freertos.o
+    0x080066e4   0x0000002a   Code   RO         6006    i.prvCopyDataFromQueue  queue.o
+    0x0800670e   0x0000007e   Code   RO         6007    i.prvCopyDataToQueue  queue.o
+    0x0800678c   0x0000007c   Code   RO         1110    i.prvCreateSectors  freertos_tcp_win.o
+    0x08006808   0x00000054   Code   RO         1406    i.prvDMARxDescListInit  networkinterface.o
+    0x0800685c   0x0000005c   Code   RO         1407    i.prvDMATxDescListInit  networkinterface.o
+    0x080068b8   0x00000050   Code   RO         6355    i.prvDeleteTCB      tasks.o
+    0x08006908   0x00000104   Code   RO          530    i.prvDetermineSocketSize  freertos_sockets.o
+    0x08006a0c   0x00000108   Code   RO         1408    i.prvEMACHandlerTask  networkinterface.o
+    0x08006b14   0x0000013c   Code   RO         1409    i.prvEthernetUpdateConfig  networkinterface.o
+    0x08006c50   0x00000014   Code   RO         6008    i.prvGetDisinheritPriorityAfterTimeout  queue.o
+    0x08006c64   0x00000068   Code   RO          532    i.prvGetPrivatePortNumber  freertos_sockets.o
+    0x08006ccc   0x000001b8   Code   RO          883    i.prvHandleEstablished  freertos_tcp_ip.o
+    0x08006e84   0x0000000c   Code   RO          255    i.prvHandleEthernetPacket  freertos_ip.o
+    0x08006e90   0x00000124   Code   RO          884    i.prvHandleListen   freertos_tcp_ip.o
+    0x08006fb4   0x00000122   Code   RO          885    i.prvHandleSynReceived  freertos_tcp_ip.o
     0x080070d6   0x00000002   PAD
-    0x080070d8   0x0000007c   Code   RO         7106    i.prvHeapInit       heap_4.o
-    0x08007154   0x00000124   Code   RO          335    i.prvIPTask         freertos_ip.o
-    0x08007278   0x00000036   Code   RO          336    i.prvIPTimerCheck   freertos_ip.o
-    0x080072ae   0x00000012   Code   RO          337    i.prvIPTimerReload  freertos_ip.o
-    0x080072c0   0x00000030   Code   RO          338    i.prvIPTimerStart   freertos_ip.o
-    0x080072f0   0x00000028   Code   RO         6426    i.prvIdleTask       tasks.o
-    0x08007318   0x00000026   Code   RO         6080    i.prvInitialiseNewQueue  queue.o
-    0x0800733e   0x000000b4   Code   RO         6427    i.prvInitialiseNewTask  tasks.o
+    0x080070d8   0x0000007c   Code   RO         7036    i.prvHeapInit       heap_4.o
+    0x08007154   0x00000124   Code   RO          256    i.prvIPTask         freertos_ip.o
+    0x08007278   0x00000036   Code   RO          257    i.prvIPTimerCheck   freertos_ip.o
+    0x080072ae   0x00000012   Code   RO          258    i.prvIPTimerReload  freertos_ip.o
+    0x080072c0   0x00000030   Code   RO          259    i.prvIPTimerStart   freertos_ip.o
+    0x080072f0   0x00000028   Code   RO         6356    i.prvIdleTask       tasks.o
+    0x08007318   0x00000026   Code   RO         6010    i.prvInitialiseNewQueue  queue.o
+    0x0800733e   0x000000b4   Code   RO         6357    i.prvInitialiseNewTask  tasks.o
     0x080073f2   0x00000002   PAD
-    0x080073f4   0x00000068   Code   RO         6428    i.prvInitialiseTaskLists  tasks.o
-    0x0800745c   0x00000068   Code   RO         7107    i.prvInsertBlockIntoFreeList  heap_4.o
-    0x080074c4   0x0000001a   Code   RO         6081    i.prvIsQueueEmpty   queue.o
-    0x080074de   0x0000001e   Code   RO         6082    i.prvIsQueueFull    queue.o
-    0x080074fc   0x000000e0   Code   RO         1481    i.prvNetworkInterfaceInput  networkinterface.o
-    0x080075dc   0x00000088   Code   RO          339    i.prvProcessEthernetPacket  freertos_ip.o
-    0x08007664   0x0000004c   Code   RO          340    i.prvProcessICMPEchoReply  freertos_ip.o
-    0x080076b0   0x0000005c   Code   RO          341    i.prvProcessICMPEchoRequest  freertos_ip.o
-    0x0800770c   0x0000002a   Code   RO          342    i.prvProcessICMPPacket  freertos_ip.o
+    0x080073f4   0x00000068   Code   RO         6358    i.prvInitialiseTaskLists  tasks.o
+    0x0800745c   0x00000068   Code   RO         7037    i.prvInsertBlockIntoFreeList  heap_4.o
+    0x080074c4   0x0000001a   Code   RO         6011    i.prvIsQueueEmpty   queue.o
+    0x080074de   0x0000001e   Code   RO         6012    i.prvIsQueueFull    queue.o
+    0x080074fc   0x000000e0   Code   RO         1411    i.prvNetworkInterfaceInput  networkinterface.o
+    0x080075dc   0x00000088   Code   RO          260    i.prvProcessEthernetPacket  freertos_ip.o
+    0x08007664   0x0000004c   Code   RO          261    i.prvProcessICMPEchoReply  freertos_ip.o
+    0x080076b0   0x0000005c   Code   RO          262    i.prvProcessICMPEchoRequest  freertos_ip.o
+    0x0800770c   0x0000002a   Code   RO          263    i.prvProcessICMPPacket  freertos_ip.o
     0x08007736   0x00000002   PAD
-    0x08007738   0x00000148   Code   RO          343    i.prvProcessIPPacket  freertos_ip.o
-    0x08007880   0x00000048   Code   RO          344    i.prvProcessNetworkDownEvent  freertos_ip.o
-    0x080078c8   0x00000034   Code   RO         6429    i.prvResetNextTaskUnblockTime  tasks.o
-    0x080078fc   0x000000f8   Code   RO          965    i.prvSendData       freertos_tcp_ip.o
-    0x080079f4   0x000000cc   Code   RO         2525    i.prvServerConnectionInstance  freertos.o
-    0x08007ac0   0x00000090   Code   RO          966    i.prvSetOptions     freertos_tcp_ip.o
-    0x08007b50   0x0000005c   Code   RO          967    i.prvSetSynAckOptions  freertos_tcp_ip.o
-    0x08007bac   0x00000168   Code   RO          968    i.prvSingleStepTCPHeaderOptions  freertos_tcp_ip.o
-    0x08007d14   0x0000007a   Code   RO          969    i.prvSkipPastRemainingOptions  freertos_tcp_ip.o
+    0x08007738   0x00000148   Code   RO          264    i.prvProcessIPPacket  freertos_ip.o
+    0x08007880   0x00000048   Code   RO          265    i.prvProcessNetworkDownEvent  freertos_ip.o
+    0x080078c8   0x00000034   Code   RO         6359    i.prvResetNextTaskUnblockTime  tasks.o
+    0x080078fc   0x000000f8   Code   RO          886    i.prvSendData       freertos_tcp_ip.o
+    0x080079f4   0x000000cc   Code   RO         2455    i.prvServerConnectionInstance  freertos.o
+    0x08007ac0   0x00000090   Code   RO          887    i.prvSetOptions     freertos_tcp_ip.o
+    0x08007b50   0x0000005c   Code   RO          888    i.prvSetSynAckOptions  freertos_tcp_ip.o
+    0x08007bac   0x00000168   Code   RO          889    i.prvSingleStepTCPHeaderOptions  freertos_tcp_ip.o
+    0x08007d14   0x0000007a   Code   RO          890    i.prvSkipPastRemainingOptions  freertos_tcp_ip.o
     0x08007d8e   0x00000002   PAD
-    0x08007d90   0x0000005c   Code   RO          970    i.prvSocketSetMSS   freertos_tcp_ip.o
-    0x08007dec   0x000000d8   Code   RO          971    i.prvStoreRxData    freertos_tcp_ip.o
-    0x08007ec4   0x0000005a   Code   RO          972    i.prvTCPAddTxData   freertos_tcp_ip.o
+    0x08007d90   0x0000005c   Code   RO          891    i.prvSocketSetMSS   freertos_tcp_ip.o
+    0x08007dec   0x000000d8   Code   RO          892    i.prvStoreRxData    freertos_tcp_ip.o
+    0x08007ec4   0x0000005a   Code   RO          893    i.prvTCPAddTxData   freertos_tcp_ip.o
     0x08007f1e   0x00000002   PAD
-    0x08007f20   0x00000094   Code   RO          973    i.prvTCPBufferResize  freertos_tcp_ip.o
-    0x08007fb4   0x0000008c   Code   RO          613    i.prvTCPCreateStream  freertos_sockets.o
-    0x08008040   0x00000040   Code   RO          974    i.prvTCPCreateWindow  freertos_tcp_ip.o
-    0x08008080   0x000000f0   Code   RO          975    i.prvTCPHandleFin   freertos_tcp_ip.o
-    0x08008170   0x0000019a   Code   RO          976    i.prvTCPHandleState  freertos_tcp_ip.o
-    0x0800830a   0x000000c0   Code   RO          977    i.prvTCPNextTimeout  freertos_tcp_ip.o
+    0x08007f20   0x00000094   Code   RO          894    i.prvTCPBufferResize  freertos_tcp_ip.o
+    0x08007fb4   0x0000008c   Code   RO          534    i.prvTCPCreateStream  freertos_sockets.o
+    0x08008040   0x00000040   Code   RO          895    i.prvTCPCreateWindow  freertos_tcp_ip.o
+    0x08008080   0x000000f0   Code   RO          896    i.prvTCPHandleFin   freertos_tcp_ip.o
+    0x08008170   0x0000019a   Code   RO          897    i.prvTCPHandleState  freertos_tcp_ip.o
+    0x0800830a   0x000000c0   Code   RO          898    i.prvTCPNextTimeout  freertos_tcp_ip.o
     0x080083ca   0x00000002   PAD
-    0x080083cc   0x0000014c   Code   RO          978    i.prvTCPPrepareConnect  freertos_tcp_ip.o
-    0x08008518   0x0000021c   Code   RO          979    i.prvTCPPrepareSend  freertos_tcp_ip.o
-    0x08008734   0x00000278   Code   RO          980    i.prvTCPReturnPacket  freertos_tcp_ip.o
-    0x080089ac   0x0000000e   Code   RO          981    i.prvTCPSendChallengeAck  freertos_tcp_ip.o
-    0x080089ba   0x00000070   Code   RO          614    i.prvTCPSendCheck   freertos_sockets.o
-    0x08008a2a   0x0000008c   Code   RO          982    i.prvTCPSendPacket  freertos_tcp_ip.o
-    0x08008ab6   0x0000003e   Code   RO          983    i.prvTCPSendRepeated  freertos_tcp_ip.o
-    0x08008af4   0x0000000e   Code   RO          984    i.prvTCPSendReset   freertos_tcp_ip.o
-    0x08008b02   0x00000028   Code   RO          985    i.prvTCPSendSpecialPacketHelper  freertos_tcp_ip.o
+    0x080083cc   0x0000014c   Code   RO          899    i.prvTCPPrepareConnect  freertos_tcp_ip.o
+    0x08008518   0x0000021c   Code   RO          900    i.prvTCPPrepareSend  freertos_tcp_ip.o
+    0x08008734   0x00000278   Code   RO          901    i.prvTCPReturnPacket  freertos_tcp_ip.o
+    0x080089ac   0x0000000e   Code   RO          902    i.prvTCPSendChallengeAck  freertos_tcp_ip.o
+    0x080089ba   0x00000070   Code   RO          535    i.prvTCPSendCheck   freertos_sockets.o
+    0x08008a2a   0x0000008c   Code   RO          903    i.prvTCPSendPacket  freertos_tcp_ip.o
+    0x08008ab6   0x0000003e   Code   RO          904    i.prvTCPSendRepeated  freertos_tcp_ip.o
+    0x08008af4   0x0000000e   Code   RO          905    i.prvTCPSendReset   freertos_tcp_ip.o
+    0x08008b02   0x00000028   Code   RO          906    i.prvTCPSendSpecialPacketHelper  freertos_tcp_ip.o
     0x08008b2a   0x00000002   PAD
-    0x08008b2c   0x00000044   Code   RO          615    i.prvTCPSetSocketCount  freertos_sockets.o
-    0x08008b70   0x000000a0   Code   RO          986    i.prvTCPSocketCopy  freertos_tcp_ip.o
-    0x08008c10   0x0000002a   Code   RO          987    i.prvTCPSocketIsActive  freertos_tcp_ip.o
-    0x08008c3a   0x00000068   Code   RO          988    i.prvTCPStatusAgeCheck  freertos_tcp_ip.o
-    0x08008ca2   0x00000028   Code   RO          989    i.prvTCPTouchSocket  freertos_tcp_ip.o
+    0x08008b2c   0x00000044   Code   RO          536    i.prvTCPSetSocketCount  freertos_sockets.o
+    0x08008b70   0x000000a0   Code   RO          907    i.prvTCPSocketCopy  freertos_tcp_ip.o
+    0x08008c10   0x0000002a   Code   RO          908    i.prvTCPSocketIsActive  freertos_tcp_ip.o
+    0x08008c3a   0x00000068   Code   RO          909    i.prvTCPStatusAgeCheck  freertos_tcp_ip.o
+    0x08008ca2   0x00000028   Code   RO          910    i.prvTCPTouchSocket  freertos_tcp_ip.o
     0x08008cca   0x00000002   PAD
-    0x08008ccc   0x00000090   Code   RO         1190    i.prvTCPWindowFastRetransmit  freertos_tcp_win.o
-    0x08008d5c   0x00000120   Code   RO         1191    i.prvTCPWindowTxCheckAck  freertos_tcp_win.o
-    0x08008e7c   0x00000062   Code   RO         1192    i.prvTCPWindowTxHasSpace  freertos_tcp_win.o
+    0x08008ccc   0x00000090   Code   RO         1111    i.prvTCPWindowFastRetransmit  freertos_tcp_win.o
+    0x08008d5c   0x00000120   Code   RO         1112    i.prvTCPWindowTxCheckAck  freertos_tcp_win.o
+    0x08008e7c   0x00000062   Code   RO         1113    i.prvTCPWindowTxHasSpace  freertos_tcp_win.o
     0x08008ede   0x00000002   PAD
-    0x08008ee0   0x00000040   Code   RO         7160    i.prvTaskExitError  port.o
-    0x08008f20   0x0000001e   Code   RO         5941    i.prvTestWaitCondition  event_groups.o
-    0x08008f3e   0x0000007e   Code   RO         6083    i.prvUnlockQueue    queue.o
-    0x08008fbc   0x00000030   Code   RO          616    i.prvValidSocket    freertos_sockets.o
-    0x08008fec   0x00000026   Code   RO          990    i.prvWinScaleFactor  freertos_tcp_ip.o
-    0x08009012   0x00000026   Code   RO         1741    i.prvWriteDMAOMR    stm32f4xx_hal_eth.o
-    0x08009038   0x0000001a   Code   RO         1742    i.prvWriteMACCR     stm32f4xx_hal_eth.o
-    0x08009052   0x0000001a   Code   RO         1743    i.prvWriteMACFCR    stm32f4xx_hal_eth.o
-    0x0800906c   0x0000013c   Code   RO         7108    i.pvPortMalloc      heap_4.o
-    0x080091a8   0x00000020   Code   RO         6431    i.pvTaskIncrementMutexHeldCount  tasks.o
-    0x080091c8   0x000000b4   Code   RO         1405    i.pxGetNetworkBufferWithDescriptor  bufferallocation_2.o
-    0x0800927c   0x00000030   Code   RO          617    i.pxListFindListItemWithValue  freertos_sockets.o
-    0x080092ac   0x0000002c   Code   RO         7161    i.pxPortInitialiseStack  port.o
-    0x080092d8   0x0000005c   Code   RO          618    i.pxTCPSocketLookup  freertos_sockets.o
-    0x08009334   0x0000003c   Code   RO          619    i.pxUDPSocketLookup  freertos_sockets.o
-    0x08009370   0x00000006   Code   RO         1482    i.ulApplicationGetNextSequenceNumber  networkinterface.o
-    0x08009376   0x00000018   Code   RO          991    i.ulChar2u32        freertos_tcp_ip.o
-    0x0800938e   0x0000002a   Code   RO         1193    i.ulTCPWindowTxAck  freertos_tcp_win.o
-    0x080093b8   0x00000178   Code   RO         1194    i.ulTCPWindowTxGet  freertos_tcp_win.o
-    0x08009530   0x00000048   Code   RO         1195    i.ulTCPWindowTxSack  freertos_tcp_win.o
-    0x08009578   0x00000074   Code   RO         6432    i.ulTaskNotifyTake  tasks.o
-    0x080095ec   0x0000000e   Code   RO         1196    i.ulTimerGetAge     freertos_tcp_win.o
+    0x08008ee0   0x00000040   Code   RO         7090    i.prvTaskExitError  port.o
+    0x08008f20   0x0000001e   Code   RO         5871    i.prvTestWaitCondition  event_groups.o
+    0x08008f3e   0x0000007e   Code   RO         6013    i.prvUnlockQueue    queue.o
+    0x08008fbc   0x00000030   Code   RO          537    i.prvValidSocket    freertos_sockets.o
+    0x08008fec   0x00000026   Code   RO          911    i.prvWinScaleFactor  freertos_tcp_ip.o
+    0x08009012   0x00000026   Code   RO         1671    i.prvWriteDMAOMR    stm32f4xx_hal_eth.o
+    0x08009038   0x0000001a   Code   RO         1672    i.prvWriteMACCR     stm32f4xx_hal_eth.o
+    0x08009052   0x0000001a   Code   RO         1673    i.prvWriteMACFCR    stm32f4xx_hal_eth.o
+    0x0800906c   0x0000013c   Code   RO         7038    i.pvPortMalloc      heap_4.o
+    0x080091a8   0x00000020   Code   RO         6361    i.pvTaskIncrementMutexHeldCount  tasks.o
+    0x080091c8   0x000000b4   Code   RO         1332    i.pxGetNetworkBufferWithDescriptor  bufferallocation_2.o
+    0x0800927c   0x00000030   Code   RO          538    i.pxListFindListItemWithValue  freertos_sockets.o
+    0x080092ac   0x0000002c   Code   RO         7091    i.pxPortInitialiseStack  port.o
+    0x080092d8   0x0000005c   Code   RO          539    i.pxTCPSocketLookup  freertos_sockets.o
+    0x08009334   0x0000003c   Code   RO          540    i.pxUDPSocketLookup  freertos_sockets.o
+    0x08009370   0x00000006   Code   RO         1412    i.ulApplicationGetNextSequenceNumber  networkinterface.o
+    0x08009376   0x00000018   Code   RO          912    i.ulChar2u32        freertos_tcp_ip.o
+    0x0800938e   0x0000002a   Code   RO         1114    i.ulTCPWindowTxAck  freertos_tcp_win.o
+    0x080093b8   0x00000178   Code   RO         1115    i.ulTCPWindowTxGet  freertos_tcp_win.o
+    0x08009530   0x00000048   Code   RO         1116    i.ulTCPWindowTxSack  freertos_tcp_win.o
+    0x08009578   0x00000074   Code   RO         6362    i.ulTaskNotifyTake  tasks.o
+    0x080095ec   0x0000000e   Code   RO         1117    i.ulTimerGetAge     freertos_tcp_win.o
     0x080095fa   0x00000002   PAD
-    0x080095fc   0x0000000c   Code   RO         1407    i.uxGetMinimumFreeNetworkBuffers  bufferallocation_2.o
-    0x08009608   0x00000028   Code   RO         6036    i.uxListRemove      list.o
-    0x08009630   0x0000002a   Code   RO         6084    i.uxQueueMessagesWaiting  queue.o
-    0x0800965a   0x000000f8   Code   RO          924    i.uxStreamBufferAdd  freertos_stream_buffer.o
-    0x08009752   0x00000016   Code   RO          992    i.uxStreamBufferDistance  freertos_tcp_ip.o
-    0x08009768   0x00000014   Code   RO          620    i.uxStreamBufferFrontSpace  freertos_sockets.o
-    0x0800977c   0x000000ae   Code   RO          925    i.uxStreamBufferGet  freertos_stream_buffer.o
-    0x0800982a   0x00000020   Code   RO          621    i.uxStreamBufferGetSize  freertos_sockets.o
-    0x0800984a   0x00000014   Code   RO          622    i.uxStreamBufferGetSpace  freertos_sockets.o
-    0x0800985e   0x00000014   Code   RO          993    i.uxStreamBufferMidSpace  freertos_tcp_ip.o
-    0x08009872   0x00000018   Code   RO          623    i.uxStreamBufferSpace  freertos_sockets.o
-    0x0800988a   0x00000018   Code   RO          994    i.uxStreamBufferSpace  freertos_tcp_ip.o
+    0x080095fc   0x0000000c   Code   RO         1334    i.uxGetMinimumFreeNetworkBuffers  bufferallocation_2.o
+    0x08009608   0x00000028   Code   RO         5966    i.uxListRemove      list.o
+    0x08009630   0x0000002a   Code   RO         6014    i.uxQueueMessagesWaiting  queue.o
+    0x0800965a   0x000000f8   Code   RO          845    i.uxStreamBufferAdd  freertos_stream_buffer.o
+    0x08009752   0x00000016   Code   RO          913    i.uxStreamBufferDistance  freertos_tcp_ip.o
+    0x08009768   0x00000014   Code   RO          541    i.uxStreamBufferFrontSpace  freertos_sockets.o
+    0x0800977c   0x000000ae   Code   RO          846    i.uxStreamBufferGet  freertos_stream_buffer.o
+    0x0800982a   0x00000020   Code   RO          542    i.uxStreamBufferGetSize  freertos_sockets.o
+    0x0800984a   0x00000014   Code   RO          543    i.uxStreamBufferGetSpace  freertos_sockets.o
+    0x0800985e   0x00000014   Code   RO          914    i.uxStreamBufferMidSpace  freertos_tcp_ip.o
+    0x08009872   0x00000018   Code   RO          544    i.uxStreamBufferSpace  freertos_sockets.o
+    0x0800988a   0x00000018   Code   RO          915    i.uxStreamBufferSpace  freertos_tcp_ip.o
     0x080098a2   0x00000002   PAD
-    0x080098a4   0x0000001c   Code   RO         6436    i.uxTaskResetEventItemValue  tasks.o
+    0x080098a4   0x0000001c   Code   RO         6366    i.uxTaskResetEventItemValue  tasks.o
     0x080098c0   0x000000bc   Code   RO           15    i.vARPAgeCache      freertos_arp.o
     0x0800997c   0x00000084   Code   RO           16    i.vARPGenerateRequestPacket  freertos_arp.o
     0x08009a00   0x00000158   Code   RO           17    i.vARPRefreshCacheEntry  freertos_arp.o
-    0x08009b58   0x00000018   Code   RO         2526    i.vApplicationGetIdleTaskMemory  freertos.o
-    0x08009b70   0x000000c4   Code   RO         1483    i.vApplicationIPNetworkEventHook  networkinterface.o
-    0x08009c34   0x00000002   Code   RO         1484    i.vApplicationPingReplyHook  networkinterface.o
-    0x08009c36   0x00000056   Code   RO         5943    i.vEventGroupDelete  event_groups.o
-    0x08009c8c   0x00000024   Code   RO          349    i.vIPNetworkUpCalls  freertos_ip.o
-    0x08009cb0   0x0000001a   Code   RO         6037    i.vListInitialise   list.o
-    0x08009cca   0x00000006   Code   RO         6038    i.vListInitialiseItem  list.o
-    0x08009cd0   0x00000034   Code   RO         6039    i.vListInsert       list.o
-    0x08009d04   0x00000018   Code   RO         6040    i.vListInsertEnd    list.o
-    0x08009d1c   0x00000014   Code   RO         1197    i.vListInsertFifo   freertos_tcp_win.o
-    0x08009d30   0x00000016   Code   RO         1198    i.vListInsertGeneric  freertos_tcp_win.o
+    0x08009b58   0x00000018   Code   RO         2456    i.vApplicationGetIdleTaskMemory  freertos.o
+    0x08009b70   0x000000c4   Code   RO         1413    i.vApplicationIPNetworkEventHook  networkinterface.o
+    0x08009c34   0x00000002   Code   RO         1414    i.vApplicationPingReplyHook  networkinterface.o
+    0x08009c36   0x00000056   Code   RO         5873    i.vEventGroupDelete  event_groups.o
+    0x08009c8c   0x00000024   Code   RO          270    i.vIPNetworkUpCalls  freertos_ip.o
+    0x08009cb0   0x0000001a   Code   RO         5967    i.vListInitialise   list.o
+    0x08009cca   0x00000006   Code   RO         5968    i.vListInitialiseItem  list.o
+    0x08009cd0   0x00000034   Code   RO         5969    i.vListInsert       list.o
+    0x08009d04   0x00000018   Code   RO         5970    i.vListInsertEnd    list.o
+    0x08009d1c   0x00000014   Code   RO         1118    i.vListInsertFifo   freertos_tcp_win.o
+    0x08009d30   0x00000016   Code   RO         1119    i.vListInsertGeneric  freertos_tcp_win.o
     0x08009d46   0x00000002   PAD
-    0x08009d48   0x000001f0   Code   RO         1485    i.vMACBProbePhy     networkinterface.o
-    0x08009f38   0x0000001c   Code   RO          624    i.vNetworkSocketsInit  freertos_sockets.o
-    0x08009f54   0x00000054   Code   RO         7163    i.vPortEnterCritical  port.o
-    0x08009fa8   0x0000003c   Code   RO         7164    i.vPortExitCritical  port.o
-    0x08009fe4   0x00000094   Code   RO         7109    i.vPortFree         heap_4.o
-    0x0800a078   0x00000028   Code   RO         7165    i.vPortSetupTimerInterrupt  port.o
-    0x0800a0a0   0x00000078   Code   RO         7166    i.vPortValidateInterruptPriority  port.o
-    0x0800a118   0x000000c8   Code   RO         1376    i.vProcessGeneratedUDPPacket  freertos_udp_ip.o
-    0x0800a1e0   0x0000002c   Code   RO         6087    i.vQueueAddToRegistry  queue.o
-    0x0800a20c   0x00000032   Code   RO         6088    i.vQueueDelete      queue.o
+    0x08009d48   0x000001f0   Code   RO         1415    i.vMACBProbePhy     networkinterface.o
+    0x08009f38   0x0000001c   Code   RO          545    i.vNetworkSocketsInit  freertos_sockets.o
+    0x08009f54   0x00000054   Code   RO         7093    i.vPortEnterCritical  port.o
+    0x08009fa8   0x0000003c   Code   RO         7094    i.vPortExitCritical  port.o
+    0x08009fe4   0x00000094   Code   RO         7039    i.vPortFree         heap_4.o
+    0x0800a078   0x00000028   Code   RO         7095    i.vPortSetupTimerInterrupt  port.o
+    0x0800a0a0   0x00000078   Code   RO         7096    i.vPortValidateInterruptPriority  port.o
+    0x0800a118   0x000000c8   Code   RO         1303    i.vProcessGeneratedUDPPacket  freertos_udp_ip.o
+    0x0800a1e0   0x0000002c   Code   RO         6017    i.vQueueAddToRegistry  queue.o
+    0x0800a20c   0x00000032   Code   RO         6018    i.vQueueDelete      queue.o
     0x0800a23e   0x00000002   PAD
-    0x0800a240   0x00000030   Code   RO         6089    i.vQueueUnregisterQueue  queue.o
-    0x0800a270   0x00000010   Code   RO         1409    i.vReleaseNetworkBuffer  bufferallocation_2.o
-    0x0800a280   0x0000004c   Code   RO         1410    i.vReleaseNetworkBufferAndDescriptor  bufferallocation_2.o
-    0x0800a2cc   0x0000002c   Code   RO          350    i.vReturnEthernetFrame  freertos_ip.o
-    0x0800a2f8   0x000000e4   Code   RO          625    i.vSocketBind       freertos_sockets.o
-    0x0800a3dc   0x00000080   Code   RO          626    i.vSocketClose      freertos_sockets.o
-    0x0800a45c   0x00000190   Code   RO          627    i.vSocketSelect     freertos_sockets.o
-    0x0800a5ec   0x0000004a   Code   RO          628    i.vSocketWakeUpUser  freertos_sockets.o
-    0x0800a636   0x0000000c   Code   RO          629    i.vStreamBufferClear  freertos_sockets.o
-    0x0800a642   0x00000138   Code   RO          995    i.vTCPStateChange   freertos_tcp_ip.o
-    0x0800a77a   0x0000000c   Code   RO         1200    i.vTCPTimerSet      freertos_tcp_win.o
+    0x0800a240   0x00000030   Code   RO         6019    i.vQueueUnregisterQueue  queue.o
+    0x0800a270   0x00000010   Code   RO         1336    i.vReleaseNetworkBuffer  bufferallocation_2.o
+    0x0800a280   0x0000004c   Code   RO         1337    i.vReleaseNetworkBufferAndDescriptor  bufferallocation_2.o
+    0x0800a2cc   0x0000002c   Code   RO          271    i.vReturnEthernetFrame  freertos_ip.o
+    0x0800a2f8   0x000000e4   Code   RO          546    i.vSocketBind       freertos_sockets.o
+    0x0800a3dc   0x00000080   Code   RO          547    i.vSocketClose      freertos_sockets.o
+    0x0800a45c   0x00000190   Code   RO          548    i.vSocketSelect     freertos_sockets.o
+    0x0800a5ec   0x0000004a   Code   RO          549    i.vSocketWakeUpUser  freertos_sockets.o
+    0x0800a636   0x0000000c   Code   RO          550    i.vStreamBufferClear  freertos_sockets.o
+    0x0800a642   0x00000138   Code   RO          916    i.vTCPStateChange   freertos_tcp_ip.o
+    0x0800a77a   0x0000000c   Code   RO         1121    i.vTCPTimerSet      freertos_tcp_win.o
     0x0800a786   0x00000002   PAD
-    0x0800a788   0x00000068   Code   RO         1201    i.vTCPWindowCreate  freertos_tcp_win.o
-    0x0800a7f0   0x00000040   Code   RO         1202    i.vTCPWindowDestroy  freertos_tcp_win.o
-    0x0800a830   0x00000034   Code   RO         1203    i.vTCPWindowFree    freertos_tcp_win.o
-    0x0800a864   0x00000054   Code   RO         1204    i.vTCPWindowInit    freertos_tcp_win.o
-    0x0800a8b8   0x0000005c   Code   RO         6437    i.vTaskDelay        tasks.o
-    0x0800a914   0x00000018   Code   RO         6440    i.vTaskInternalSetTimeOutState  tasks.o
-    0x0800a92c   0x0000000c   Code   RO         6441    i.vTaskMissedYield  tasks.o
-    0x0800a938   0x000000f0   Code   RO         6442    i.vTaskNotifyGiveFromISR  tasks.o
-    0x0800aa28   0x00000038   Code   RO         6443    i.vTaskPlaceOnEventList  tasks.o
-    0x0800aa60   0x0000006c   Code   RO         6444    i.vTaskPlaceOnUnorderedEventList  tasks.o
-    0x0800aacc   0x000000f4   Code   RO         6445    i.vTaskPriorityDisinheritAfterTimeout  tasks.o
-    0x0800abc0   0x000000a4   Code   RO         6447    i.vTaskRemoveFromUnorderedEventList  tasks.o
-    0x0800ac64   0x0000003c   Code   RO         6449    i.vTaskSetTimeOutState  tasks.o
-    0x0800aca0   0x000000b0   Code   RO         6450    i.vTaskStartScheduler  tasks.o
-    0x0800ad50   0x00000010   Code   RO         6452    i.vTaskSuspendAll   tasks.o
-    0x0800ad60   0x0000008c   Code   RO         6453    i.vTaskSwitchContext  tasks.o
-    0x0800adec   0x0000005c   Code   RO         5945    i.xEventGroupClearBits  event_groups.o
-    0x0800ae48   0x0000001e   Code   RO         5946    i.xEventGroupCreate  event_groups.o
-    0x0800ae66   0x000000ce   Code   RO         5949    i.xEventGroupSetBits  event_groups.o
-    0x0800af34   0x00000158   Code   RO         5951    i.xEventGroupWaitBits  event_groups.o
-    0x0800b08c   0x0000000c   Code   RO          351    i.xIPIsNetworkTaskReady  freertos_ip.o
-    0x0800b098   0x0000001c   Code   RO          352    i.xIsCallingFromIPTask  freertos_ip.o
-    0x0800b0b4   0x00000020   Code   RO         1487    i.xMayAcceptPacket  networkinterface.o
-    0x0800b0d4   0x000000c4   Code   RO         1411    i.xNetworkBuffersInitialise  bufferallocation_2.o
-    0x0800b198   0x000000d4   Code   RO         1488    i.xNetworkInterfaceInitialise  networkinterface.o
-    0x0800b26c   0x000000a0   Code   RO         1489    i.xNetworkInterfaceOutput  networkinterface.o
-    0x0800b30c   0x00000168   Code   RO         7167    i.xPortStartScheduler  port.o
-    0x0800b474   0x00000276   Code   RO          996    i.xProcessReceivedTCPPacket  freertos_tcp_ip.o
-    0x0800b6ea   0x000000a2   Code   RO         1377    i.xProcessReceivedUDPPacket  freertos_udp_ip.o
-    0x0800b78c   0x0000005c   Code   RO         6090    i.xQueueCreateCountingSemaphore  queue.o
-    0x0800b7e8   0x00000060   Code   RO         6094    i.xQueueGenericCreate  queue.o
-    0x0800b848   0x000000e0   Code   RO         6095    i.xQueueGenericCreateStatic  queue.o
-    0x0800b928   0x00000098   Code   RO         6096    i.xQueueGenericReset  queue.o
-    0x0800b9c0   0x000001a8   Code   RO         6097    i.xQueueGenericSend  queue.o
-    0x0800bb68   0x000000f8   Code   RO         6098    i.xQueueGenericSendFromISR  queue.o
-    0x0800bc60   0x00000168   Code   RO         6104    i.xQueueReceive     queue.o
-    0x0800bdc8   0x000000ca   Code   RO         6105    i.xQueueReceiveFromISR  queue.o
+    0x0800a788   0x00000068   Code   RO         1122    i.vTCPWindowCreate  freertos_tcp_win.o
+    0x0800a7f0   0x00000040   Code   RO         1123    i.vTCPWindowDestroy  freertos_tcp_win.o
+    0x0800a830   0x00000034   Code   RO         1124    i.vTCPWindowFree    freertos_tcp_win.o
+    0x0800a864   0x00000054   Code   RO         1125    i.vTCPWindowInit    freertos_tcp_win.o
+    0x0800a8b8   0x0000005c   Code   RO         6367    i.vTaskDelay        tasks.o
+    0x0800a914   0x00000018   Code   RO         6370    i.vTaskInternalSetTimeOutState  tasks.o
+    0x0800a92c   0x0000000c   Code   RO         6371    i.vTaskMissedYield  tasks.o
+    0x0800a938   0x000000f0   Code   RO         6372    i.vTaskNotifyGiveFromISR  tasks.o
+    0x0800aa28   0x00000038   Code   RO         6373    i.vTaskPlaceOnEventList  tasks.o
+    0x0800aa60   0x0000006c   Code   RO         6374    i.vTaskPlaceOnUnorderedEventList  tasks.o
+    0x0800aacc   0x000000f4   Code   RO         6375    i.vTaskPriorityDisinheritAfterTimeout  tasks.o
+    0x0800abc0   0x000000a4   Code   RO         6377    i.vTaskRemoveFromUnorderedEventList  tasks.o
+    0x0800ac64   0x0000003c   Code   RO         6379    i.vTaskSetTimeOutState  tasks.o
+    0x0800aca0   0x000000b0   Code   RO         6380    i.vTaskStartScheduler  tasks.o
+    0x0800ad50   0x00000010   Code   RO         6382    i.vTaskSuspendAll   tasks.o
+    0x0800ad60   0x0000008c   Code   RO         6383    i.vTaskSwitchContext  tasks.o
+    0x0800adec   0x0000005c   Code   RO         5875    i.xEventGroupClearBits  event_groups.o
+    0x0800ae48   0x0000001e   Code   RO         5876    i.xEventGroupCreate  event_groups.o
+    0x0800ae66   0x000000ce   Code   RO         5879    i.xEventGroupSetBits  event_groups.o
+    0x0800af34   0x00000158   Code   RO         5881    i.xEventGroupWaitBits  event_groups.o
+    0x0800b08c   0x0000000c   Code   RO          272    i.xIPIsNetworkTaskReady  freertos_ip.o
+    0x0800b098   0x0000001c   Code   RO          273    i.xIsCallingFromIPTask  freertos_ip.o
+    0x0800b0b4   0x00000020   Code   RO         1417    i.xMayAcceptPacket  networkinterface.o
+    0x0800b0d4   0x000000c4   Code   RO         1338    i.xNetworkBuffersInitialise  bufferallocation_2.o
+    0x0800b198   0x000000d4   Code   RO         1418    i.xNetworkInterfaceInitialise  networkinterface.o
+    0x0800b26c   0x000000a0   Code   RO         1419    i.xNetworkInterfaceOutput  networkinterface.o
+    0x0800b30c   0x00000168   Code   RO         7097    i.xPortStartScheduler  port.o
+    0x0800b474   0x00000276   Code   RO          917    i.xProcessReceivedTCPPacket  freertos_tcp_ip.o
+    0x0800b6ea   0x000000a2   Code   RO         1304    i.xProcessReceivedUDPPacket  freertos_udp_ip.o
+    0x0800b78c   0x0000005c   Code   RO         6020    i.xQueueCreateCountingSemaphore  queue.o
+    0x0800b7e8   0x00000060   Code   RO         6024    i.xQueueGenericCreate  queue.o
+    0x0800b848   0x000000e0   Code   RO         6025    i.xQueueGenericCreateStatic  queue.o
+    0x0800b928   0x00000098   Code   RO         6026    i.xQueueGenericReset  queue.o
+    0x0800b9c0   0x000001a8   Code   RO         6027    i.xQueueGenericSend  queue.o
+    0x0800bb68   0x000000f8   Code   RO         6028    i.xQueueGenericSendFromISR  queue.o
+    0x0800bc60   0x00000168   Code   RO         6034    i.xQueueReceive     queue.o
+    0x0800bdc8   0x000000ca   Code   RO         6035    i.xQueueReceiveFromISR  queue.o
     0x0800be92   0x00000002   PAD
-    0x0800be94   0x000001b8   Code   RO         6106    i.xQueueSemaphoreTake  queue.o
-    0x0800c04c   0x0000006c   Code   RO          353    i.xSendEventStructToIPTask  freertos_ip.o
-    0x0800c0b8   0x00000018   Code   RO          354    i.xSendEventToIPTask  freertos_ip.o
-    0x0800c0d0   0x0000000c   Code   RO         1205    i.xSequenceGreaterThan  freertos_tcp_win.o
-    0x0800c0dc   0x0000000a   Code   RO         1206    i.xSequenceGreaterThanOrEqual  freertos_tcp_win.o
-    0x0800c0e6   0x0000000c   Code   RO         1207    i.xSequenceLessThan  freertos_tcp_win.o
+    0x0800be94   0x000001b8   Code   RO         6036    i.xQueueSemaphoreTake  queue.o
+    0x0800c04c   0x0000006c   Code   RO          274    i.xSendEventStructToIPTask  freertos_ip.o
+    0x0800c0b8   0x00000018   Code   RO          275    i.xSendEventToIPTask  freertos_ip.o
+    0x0800c0d0   0x0000000c   Code   RO         1126    i.xSequenceGreaterThan  freertos_tcp_win.o
+    0x0800c0dc   0x0000000a   Code   RO         1127    i.xSequenceGreaterThanOrEqual  freertos_tcp_win.o
+    0x0800c0e6   0x0000000c   Code   RO         1128    i.xSequenceLessThan  freertos_tcp_win.o
     0x0800c0f2   0x00000002   PAD
-    0x0800c0f4   0x00000050   Code   RO          997    i.xTCPCheckNewClient  freertos_tcp_ip.o
-    0x0800c144   0x00000094   Code   RO          998    i.xTCPSocketCheck   freertos_tcp_ip.o
-    0x0800c1d8   0x000000a4   Code   RO          630    i.xTCPTimerCheck    freertos_sockets.o
-    0x0800c27c   0x00000022   Code   RO         1208    i.xTCPWindowGetHead  freertos_tcp_win.o
+    0x0800c0f4   0x00000050   Code   RO          918    i.xTCPCheckNewClient  freertos_tcp_ip.o
+    0x0800c144   0x00000094   Code   RO          919    i.xTCPSocketCheck   freertos_tcp_ip.o
+    0x0800c1d8   0x000000a4   Code   RO          551    i.xTCPTimerCheck    freertos_sockets.o
+    0x0800c27c   0x00000022   Code   RO         1129    i.xTCPWindowGetHead  freertos_tcp_win.o
     0x0800c29e   0x00000002   PAD
-    0x0800c2a0   0x000000b8   Code   RO         1209    i.xTCPWindowNew     freertos_tcp_win.o
-    0x0800c358   0x00000018   Code   RO         1210    i.xTCPWindowPeekHead  freertos_tcp_win.o
-    0x0800c370   0x00000064   Code   RO         1211    i.xTCPWindowRxConfirm  freertos_tcp_win.o
-    0x0800c3d4   0x0000002e   Code   RO         1212    i.xTCPWindowRxEmpty  freertos_tcp_win.o
-    0x0800c402   0x00000026   Code   RO         1213    i.xTCPWindowRxFind  freertos_tcp_win.o
-    0x0800c428   0x00000010   Code   RO         1214    i.xTCPWindowTxDone  freertos_tcp_win.o
-    0x0800c438   0x0000008c   Code   RO         1215    i.xTCPWindowTxHasData  freertos_tcp_win.o
-    0x0800c4c4   0x0000008c   Code   RO         6454    i.xTaskCheckForTimeOut  tasks.o
-    0x0800c550   0x00000064   Code   RO         6455    i.xTaskCreate       tasks.o
-    0x0800c5b4   0x000000ba   Code   RO         6456    i.xTaskCreateStatic  tasks.o
+    0x0800c2a0   0x000000b8   Code   RO         1130    i.xTCPWindowNew     freertos_tcp_win.o
+    0x0800c358   0x00000018   Code   RO         1131    i.xTCPWindowPeekHead  freertos_tcp_win.o
+    0x0800c370   0x00000064   Code   RO         1132    i.xTCPWindowRxConfirm  freertos_tcp_win.o
+    0x0800c3d4   0x0000002e   Code   RO         1133    i.xTCPWindowRxEmpty  freertos_tcp_win.o
+    0x0800c402   0x00000026   Code   RO         1134    i.xTCPWindowRxFind  freertos_tcp_win.o
+    0x0800c428   0x00000010   Code   RO         1135    i.xTCPWindowTxDone  freertos_tcp_win.o
+    0x0800c438   0x0000008c   Code   RO         1136    i.xTCPWindowTxHasData  freertos_tcp_win.o
+    0x0800c4c4   0x0000008c   Code   RO         6384    i.xTaskCheckForTimeOut  tasks.o
+    0x0800c550   0x00000064   Code   RO         6385    i.xTaskCreate       tasks.o
+    0x0800c5b4   0x000000ba   Code   RO         6386    i.xTaskCreateStatic  tasks.o
     0x0800c66e   0x00000002   PAD
-    0x0800c670   0x0000000c   Code   RO         6459    i.xTaskGetCurrentTaskHandle  tasks.o
-    0x0800c67c   0x00000020   Code   RO         6460    i.xTaskGetSchedulerState  tasks.o
-    0x0800c69c   0x0000000c   Code   RO         6461    i.xTaskGetTickCount  tasks.o
-    0x0800c6a8   0x00000014   Code   RO         6462    i.xTaskGetTickCountFromISR  tasks.o
-    0x0800c6bc   0x00000148   Code   RO         6463    i.xTaskIncrementTick  tasks.o
-    0x0800c804   0x000000c8   Code   RO         6466    i.xTaskPriorityDisinherit  tasks.o
-    0x0800c8cc   0x000000c8   Code   RO         6467    i.xTaskPriorityInherit  tasks.o
-    0x0800c994   0x00000098   Code   RO         6468    i.xTaskRemoveFromEventList  tasks.o
-    0x0800ca2c   0x00000104   Code   RO         6469    i.xTaskResumeAll    tasks.o
+    0x0800c670   0x0000000c   Code   RO         6389    i.xTaskGetCurrentTaskHandle  tasks.o
+    0x0800c67c   0x00000020   Code   RO         6390    i.xTaskGetSchedulerState  tasks.o
+    0x0800c69c   0x0000000c   Code   RO         6391    i.xTaskGetTickCount  tasks.o
+    0x0800c6a8   0x00000014   Code   RO         6392    i.xTaskGetTickCountFromISR  tasks.o
+    0x0800c6bc   0x00000148   Code   RO         6393    i.xTaskIncrementTick  tasks.o
+    0x0800c804   0x000000c8   Code   RO         6396    i.xTaskPriorityDisinherit  tasks.o
+    0x0800c8cc   0x000000c8   Code   RO         6397    i.xTaskPriorityInherit  tasks.o
+    0x0800c994   0x00000098   Code   RO         6398    i.xTaskRemoveFromEventList  tasks.o
+    0x0800ca2c   0x00000104   Code   RO         6399    i.xTaskResumeAll    tasks.o
     0x0800cb30   0x00000026   Data   RO           20    .constdata          freertos_arp.o
     0x0800cb56   0x00000002   PAD
-    0x0800cb58   0x00000020   Data   RO          356    .constdata          freertos_ip.o
-    0x0800cb78   0x00000004   Data   RO         1413    .constdata          bufferallocation_2.o
-    0x0800cb7c   0x0000000c   Data   RO         1491    .constdata          networkinterface.o
-    0x0800cb88   0x00000016   Data   RO         2111    .constdata          main.o
+    0x0800cb58   0x00000020   Data   RO          277    .constdata          freertos_ip.o
+    0x0800cb78   0x00000004   Data   RO         1340    .constdata          bufferallocation_2.o
+    0x0800cb7c   0x0000000c   Data   RO         1421    .constdata          networkinterface.o
+    0x0800cb88   0x00000016   Data   RO         2041    .constdata          main.o
     0x0800cb9e   0x00000002   PAD
-    0x0800cba0   0x00000024   Data   RO         2407    .constdata          sd_diskio.o
-    0x0800cbc4   0x00000048   Data   RO         2528    .constdata          freertos.o
-    0x0800cc0c   0x00000008   Data   RO         3434    .constdata          stm32f4xx_hal_dma.o
-    0x0800cc14   0x00000018   Data   RO         5900    .constdata          system_stm32f4xx.o
-    0x0800cc2c   0x00000015   Data   RO         2529    .conststring        freertos.o
+    0x0800cba0   0x00000024   Data   RO         2337    .constdata          sd_diskio.o
+    0x0800cbc4   0x00000048   Data   RO         2458    .constdata          freertos.o
+    0x0800cc0c   0x00000008   Data   RO         3364    .constdata          stm32f4xx_hal_dma.o
+    0x0800cc14   0x00000018   Data   RO         5830    .constdata          system_stm32f4xx.o
+    0x0800cc2c   0x00000015   Data   RO         2459    .conststring        freertos.o
     0x0800cc41   0x00000003   PAD
-    0x0800cc44   0x00000030   Data   RO         8089    Region$$Table       anon$$obj.o
+    0x0800cc44   0x00000030   Data   RO         8017    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM2 (Base: 0x10000000, Size: 0x00002568, Max: 0x00010000, ABSOLUTE)
@@ -5185,45 +5136,45 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x10000000   0x00000004   Data   RW           21    .data               freertos_arp.o
-    0x10000004   0x00000024   Data   RW          357    .data               freertos_ip.o
-    0x10000028   0x00000004   Data   RW          633    .data               freertos_sockets.o
-    0x1000002c   0x00000008   Data   RW         1217    .data               freertos_tcp_win.o
-    0x10000034   0x00000018   Data   RW         1378    .data               freertos_udp_ip.o
-    0x1000004c   0x00000008   Data   RW         1414    .data               bufferallocation_2.o
-    0x10000054   0x00000018   Data   RW         1492    .data               networkinterface.o
-    0x1000006c   0x00000008   Data   RW         2408    .data               sd_diskio.o
-    0x10000074   0x00000005   Data   RW         2488    .data               fatfs.o
+    0x10000004   0x00000024   Data   RW          278    .data               freertos_ip.o
+    0x10000028   0x00000004   Data   RW          554    .data               freertos_sockets.o
+    0x1000002c   0x00000008   Data   RW         1138    .data               freertos_tcp_win.o
+    0x10000034   0x00000018   Data   RW         1305    .data               freertos_udp_ip.o
+    0x1000004c   0x00000008   Data   RW         1341    .data               bufferallocation_2.o
+    0x10000054   0x00000018   Data   RW         1422    .data               networkinterface.o
+    0x1000006c   0x00000008   Data   RW         2338    .data               sd_diskio.o
+    0x10000074   0x00000005   Data   RW         2418    .data               fatfs.o
     0x10000079   0x00000003   PAD
-    0x1000007c   0x0000001e   Data   RW         2530    .data               freertos.o
+    0x1000007c   0x0000001e   Data   RW         2460    .data               freertos.o
     0x1000009a   0x00000002   PAD
-    0x1000009c   0x00000009   Data   RW         3866    .data               stm32f4xx_hal.o
+    0x1000009c   0x00000009   Data   RW         3796    .data               stm32f4xx_hal.o
     0x100000a5   0x00000003   PAD
-    0x100000a8   0x00000004   Data   RW         5901    .data               system_stm32f4xx.o
-    0x100000ac   0x0000003c   Data   RW         6472    .data               tasks.o
-    0x100000e8   0x00000018   Data   RW         7114    .data               heap_4.o
-    0x10000100   0x0000000c   Data   RW         7168    .data               port.o
+    0x100000a8   0x00000004   Data   RW         5831    .data               system_stm32f4xx.o
+    0x100000ac   0x0000003c   Data   RW         6402    .data               tasks.o
+    0x100000e8   0x00000018   Data   RW         7044    .data               heap_4.o
+    0x10000100   0x0000000c   Data   RW         7098    .data               port.o
     0x1000010c   0x00000048   Zero   RW           19    .bss                freertos_arp.o
-    0x10000154   0x00000050   Zero   RW          355    .bss                freertos_ip.o
-    0x100001a4   0x00000028   Zero   RW          631    .bss                freertos_sockets.o
-    0x100001cc   0x00000014   Zero   RW         1216    .bss                freertos_tcp_win.o
-    0x100001e0   0x00000884   Zero   RW         1412    .bss                bufferallocation_2.o
-    0x10000a64   0x00001284   Zero   RW         2527    .bss                freertos.o
-    0x10001ce8   0x00000144   Zero   RW         2593    .bss                sdio.o
-    0x10001e2c   0x00000040   Zero   RW         2635    .bss                tim.o
-    0x10001e6c   0x00000180   Zero   RW         2679    .bss                usart.o
-    0x10001fec   0x00000040   Zero   RW         2879    .bss                stm32f4xx_hal_timebase_tim.o
-    0x1000202c   0x00000040   Zero   RW         6107    .bss                queue.o
-    0x1000206c   0x000000f0   Zero   RW         6471    .bss                tasks.o
-    0x1000215c   0x0000000c   Zero   RW         7664    .bss                ff_gen_drv.o
+    0x10000154   0x00000050   Zero   RW          276    .bss                freertos_ip.o
+    0x100001a4   0x00000028   Zero   RW          552    .bss                freertos_sockets.o
+    0x100001cc   0x00000014   Zero   RW         1137    .bss                freertos_tcp_win.o
+    0x100001e0   0x00000884   Zero   RW         1339    .bss                bufferallocation_2.o
+    0x10000a64   0x00001284   Zero   RW         2457    .bss                freertos.o
+    0x10001ce8   0x00000144   Zero   RW         2523    .bss                sdio.o
+    0x10001e2c   0x00000040   Zero   RW         2565    .bss                tim.o
+    0x10001e6c   0x00000180   Zero   RW         2609    .bss                usart.o
+    0x10001fec   0x00000040   Zero   RW         2809    .bss                stm32f4xx_hal_timebase_tim.o
+    0x1000202c   0x00000040   Zero   RW         6037    .bss                queue.o
+    0x1000206c   0x000000f0   Zero   RW         6401    .bss                tasks.o
+    0x1000215c   0x0000000c   Zero   RW         7594    .bss                ff_gen_drv.o
     0x10002168   0x00000400   Zero   RW            1    STACK               startup_stm32f407xx.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000130e8, Max: 0x00020000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00012ce8, Max: 0x00020000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x000030e8   Zero   RW         1490    .bss                networkinterface.o
-    0x200030e8   0x00010000   Zero   RW         7113    .bss                heap_4.o
+    0x20000000   0x000030e8   Zero   RW         1420    .bss                networkinterface.o
+    0x200030e8   0x0000fc00   Zero   RW         7043    .bss                heap_4.o
 
 
 ==============================================================================
@@ -5234,26 +5185,25 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        216         26          0          0          0       5782   bsp_driver_sd.o
-       480         58          4          8       2180       5317   bufferallocation_2.o
+       480         58          4          8       2180       9065   bufferallocation_2.o
        464         10          0          0          0      30953   cmsis_os.o
        104          4          0          0          0        734   dma.o
        340         22          0          0          0       1094   eth.o
        788          6          0          0          0      26506   event_groups.o
         28         12          0          5          0        966   fatfs.o
        102          6          0          0         12       1603   ff_gen_drv.o
-       480         32         93         30       4740      15528   freertos.o
+       480         34         93         30       4740      15480   freertos.o
       1124         70         38          4         72      51719   freertos_arp.o
          0          0          0          0          0      20245   freertos_dhcp.o
-         0          0          0          0          0      12788   freertos_dns.o
       2250        182         32         36         80      32691   freertos_ip.o
       4516         96          0          4         40      48695   freertos_sockets.o
        436          0          0          0          0       9120   freertos_stream_buffer.o
       7082         92          0          0          0      54784   freertos_tcp_ip.o
          0          0          0          0          0       2060   freertos_tcp_server.o
-      2824         56          0          8         20      29935   freertos_tcp_win.o
-       362          4          0         24          0      15058   freertos_udp_ip.o
+      2824         56          0          8         20      38975   freertos_tcp_win.o
+       362          4          0         24          0      15034   freertos_udp_ip.o
        388         26          0          0          0       1079   gpio.o
-       692         62          0         24      65536       4651   heap_4.o
+       692         62          0         24      64512       4651   heap_4.o
        148          0          0          0          0       3446   list.o
        302         36         22          0          0       3013   main.o
       2178        178         12         24      12520     771117   networkinterface.o
@@ -5283,7 +5233,7 @@ Image component sizes
        720         66          0          0        384       3046   usart.o
 
     ----------------------------------------------------------------------
-     50320       2326        716        268      87364    1384776   Object Totals
+     50320       2328        716        268      86340    1384704   Object Totals
          0          0         48          0          0          0   (incl. Generated)
         76          0          7          8          0          0   (incl. Padding)
 
@@ -5330,14 +5280,14 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     51624       2352        716        268      87364    1342320   Grand Totals
-     51624       2352        716        268      87364    1342320   ELF Image Totals
-     51624       2352        716        268          0          0   ROM Totals
+     51624       2354        716        268      86340    1342248   Grand Totals
+     51624       2354        716        268      86340    1342248   ELF Image Totals
+     51624       2354        716        268          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                52340 (  51.11kB)
-    Total RW  Size (RW Data + ZI Data)             87632 (  85.58kB)
+    Total RW  Size (RW Data + ZI Data)             86608 (  84.58kB)
     Total ROM Size (Code + RO Data + RW Data)      52608 (  51.38kB)
 
 ==============================================================================

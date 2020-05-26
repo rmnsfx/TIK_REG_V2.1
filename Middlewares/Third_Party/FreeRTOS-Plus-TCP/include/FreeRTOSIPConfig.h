@@ -227,12 +227,12 @@ extern uint32_t ulRand();
  * lower value can save RAM, depending on the buffer management scheme used.  If
  * ipconfigCAN_FRAGMENT_OUTGOING_PACKETS is 1 then (ipconfigNETWORK_MTU - 28) must
  * be divisible by 8. */
-//#define ipconfigNETWORK_MTU                            1200
-#define ipconfigNETWORK_MTU                            1526
+#define ipconfigNETWORK_MTU                            1200
+//#define ipconfigNETWORK_MTU                            1526
 
 /* Set ipconfigUSE_DNS to 1 to include a basic DNS client/resolver.  DNS is used
  * through the FreeRTOS_gethostbyname() API function. */
-#define ipconfigUSE_DNS                                1
+#define ipconfigUSE_DNS                                0
 
 /* If ipconfigREPLY_TO_INCOMING_PINGS is set to 1 then the IP stack will
  * generate replies to incoming ICMP echo (ping) requests. */
@@ -275,7 +275,8 @@ extern uint32_t ulRand();
  * TCP socket will use up to 2 x 6 descriptors, meaning that it can have 2 x 6
  * outstanding packets (for Rx and Tx).  When using up to 10 TP sockets
  * simultaneously, one could define TCP_WIN_SEG_COUNT as 120. */
-#define ipconfigTCP_WIN_SEG_COUNT                      240
+//#define ipconfigTCP_WIN_SEG_COUNT                      240
+#define ipconfigTCP_WIN_SEG_COUNT                      32
 
 /* Each TCP socket has a circular buffers for Rx and Tx, which have a fixed
  * maximum size.  Define the size of Rx buffer for TCP sockets. */

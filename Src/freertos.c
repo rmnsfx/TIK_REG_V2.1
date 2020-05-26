@@ -202,8 +202,8 @@ struct freertos_sockaddr xClient, xBindAddress;
 Socket_t xListeningSocket, xConnectedSocket;
 socklen_t xSize = sizeof( xClient );
 static const TickType_t xReceiveTimeOut = portMAX_DELAY;
-const BaseType_t xBacklog = 1;
-volatile char *pucRxBuffer;
+const BaseType_t xBacklog = 5;
+
 BaseType_t xReturned;
 TaskHandle_t xHandle = NULL;
 
@@ -211,15 +211,15 @@ TaskHandle_t xHandle = NULL;
 	WinProperties_t xWinProps;
 
 	/* Fill in the buffer and window sizes that will be used by the socket. */
-//	xWinProps.lTxBufSize = ipconfigTCP_TX_BUFFER_LENGTH;
-//	xWinProps.lTxWinSize = configECHO_SERVER_TX_WINDOW_SIZE;
-//	xWinProps.lRxBufSize = ipconfigTCP_RX_BUFFER_LENGTH;
-//	xWinProps.lRxWinSize = configECHO_SERVER_RX_WINDOW_SIZE;
+	xWinProps.lTxBufSize = ipconfigTCP_TX_BUFFER_LENGTH;
+	xWinProps.lTxWinSize = configECHO_SERVER_TX_WINDOW_SIZE;
+	xWinProps.lRxBufSize = ipconfigTCP_RX_BUFFER_LENGTH;
+	xWinProps.lRxWinSize = configECHO_SERVER_RX_WINDOW_SIZE;
 	
-	xWinProps.lTxBufSize = 24 * ipconfigTCP_MSS;
-	xWinProps.lTxWinSize = 8;
-	xWinProps.lRxBufSize = 24 * ipconfigTCP_MSS;
-	xWinProps.lRxWinSize = 8;
+//	xWinProps.lTxBufSize = 24 * ipconfigTCP_MSS;
+//	xWinProps.lTxWinSize = 8;
+//	xWinProps.lRxBufSize = 24 * ipconfigTCP_MSS;
+//	xWinProps.lRxWinSize = 8;
 	
 #endif /* ipconfigUSE_TCP_WIN */
 
@@ -278,8 +278,8 @@ static void prvServerConnectionInstance( void *pvParameters )
 {
 int32_t lBytes, lSent, lTotalSent;
 Socket_t xConnectedSocket;
-static const TickType_t xReceiveTimeOut = pdMS_TO_TICKS( 50000 );
-static const TickType_t xSendTimeOut = pdMS_TO_TICKS( 50000 );
+static const TickType_t xReceiveTimeOut = pdMS_TO_TICKS( 5000 );
+static const TickType_t xSendTimeOut = pdMS_TO_TICKS( 5000 );
 TickType_t xTimeOnShutdown;
 uint8_t *pucRxBuffer;
 

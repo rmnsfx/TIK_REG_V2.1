@@ -330,7 +330,7 @@ from the FreeRTOSIPConfig.h configuration header file. */
 #endif
 
 #ifndef ipconfigUSE_DHCP
-	#define ipconfigUSE_DHCP				1
+	#define ipconfigUSE_DHCP				0
 #endif
 
 #ifndef ipconfigUSE_DHCP_HOOK
@@ -359,8 +359,8 @@ from the FreeRTOSIPConfig.h configuration header file. */
 #endif
 
 #ifndef ipconfigTCP_MSS
-	//#define ipconfigTCP_MSS		( ipconfigNETWORK_MTU - ipSIZE_OF_IPv4_HEADER - ipSIZE_OF_TCP_HEADER )		
-	#define ipconfigTCP_MSS	1460
+	#define ipconfigTCP_MSS		( ipconfigNETWORK_MTU - ipSIZE_OF_IPv4_HEADER - ipSIZE_OF_TCP_HEADER )		
+	//#define ipconfigTCP_MSS	1460
 #endif
 
 /* Each TCP socket has circular stream buffers for Rx and Tx, which
@@ -368,14 +368,14 @@ from the FreeRTOSIPConfig.h configuration header file. */
  * The defaults for these size are defined here, although
  * they can be overridden at runtime by using the setsockopt() call */
 #ifndef ipconfigTCP_RX_BUFFER_LENGTH
-	//#define ipconfigTCP_RX_BUFFER_LENGTH			( 4u * ipconfigTCP_MSS )	/* defaults to 5840 bytes */
-	#define ipconfigTCP_RX_BUFFER_LENGTH 	( 16 * ipconfigTCP_MSS )		
+	#define ipconfigTCP_RX_BUFFER_LENGTH			( 4u * ipconfigTCP_MSS )	/* defaults to 5840 bytes */
+	//#define ipconfigTCP_RX_BUFFER_LENGTH 	( 16 * ipconfigTCP_MSS )		
 #endif
 
 /* Define the size of Tx stream buffer for TCP sockets */
 #ifndef ipconfigTCP_TX_BUFFER_LENGTH
-//#	define ipconfigTCP_TX_BUFFER_LENGTH			( 4u * ipconfigTCP_MSS )	/* defaults to 5840 bytes */
-	#define ipconfigTCP_TX_BUFFER_LENGTH 	( 16 * ipconfigTCP_MSS )
+#	define ipconfigTCP_TX_BUFFER_LENGTH			( 4u * ipconfigTCP_MSS )	/* defaults to 5840 bytes */
+	//#define ipconfigTCP_TX_BUFFER_LENGTH 	( 16 * ipconfigTCP_MSS )
 #endif
 
 #ifndef ipconfigMAXIMUM_DISCOVER_TX_PERIOD
@@ -395,7 +395,7 @@ from the FreeRTOSIPConfig.h configuration header file. */
 #endif
 
 #ifndef ipconfigUSE_DNS
-	#define ipconfigUSE_DNS						1
+	#define ipconfigUSE_DNS						0
 #endif
 
 #ifndef ipconfigDNS_REQUEST_ATTEMPTS

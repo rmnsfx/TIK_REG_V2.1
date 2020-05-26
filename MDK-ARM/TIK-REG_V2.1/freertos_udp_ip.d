@@ -61,4 +61,3 @@ tik-reg_v2.1\freertos_udp_ip.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\inc
 tik-reg_v2.1\freertos_udp_ip.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_DHCP.h
 tik-reg_v2.1\freertos_udp_ip.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\NetworkInterface.h
 tik-reg_v2.1\freertos_udp_ip.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\NetworkBufferManagement.h
-tik-reg_v2.1\freertos_udp_ip.o: ..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include\FreeRTOS_DNS.h
