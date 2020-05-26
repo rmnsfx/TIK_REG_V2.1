@@ -52,9 +52,9 @@
 
 /* USER CODE BEGIN PV */
 const uint8_t ucMACAddress[6] = { 0x03, 0x80, 0xE1, 0x00, 0x00, 0x00 };
-const uint8_t ucIPAddress[ 4 ] = { 192, 168, 1, 5 };
+const uint8_t ucIPAddress[ 4 ] = { 192, 168, 5, 241 };
 const uint8_t ucNetMask[ 4 ] = { 255, 255, 255, 0 };
-const uint8_t ucGatewayAddress[ 4 ] = { 192, 168, 1, 2 };
+const uint8_t ucGatewayAddress[ 4 ] = { 192, 168, 5, 240 };
 const uint8_t ucDNSServerAddress[ 4 ] = { 8, 8, 8, 8 };
 /* USER CODE END PV */
 

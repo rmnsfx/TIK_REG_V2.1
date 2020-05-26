@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -W -O0 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\include -I..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\Compiler\Keil -I..\Middlewares\Third_Party\FreeRTOS-Plus-TCP\portable\NetworkInterface\include -I../Middlewares/Third_Party/FatFs/src -I..\Middlewares\Third_Party\protocols\include
+-I C:\Repos\TIK-REG_V2.1\MDK-ARM\RTE
+-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.14.0
+-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx
+-o tik-reg_v2.1\sdio.o --omf_browse tik-reg_v2.1\sdio.crf --depend tik-reg_v2.1\sdio.d "../Src/sdio.c"

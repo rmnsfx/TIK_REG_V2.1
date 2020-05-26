@@ -834,11 +834,11 @@ ARM Macro Assembler    Page 13
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=tik-reg_v2.1\startup_stm32f407xx.d -otik-reg_v2.1\startup_stm32
-f407xx.o -I..\Inc -ID:\Repos\TIK_REG_V2.1\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM
-\CMSIS\4.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0 --pr
-edefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" --predefin
-e="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=startup_stm32f407xx.ls
-t startup_stm32f407xx.s
+f407xx.o -I..\Inc -IC:\Repos\TIK-REG_V2.1\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM
+\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.14.0
+ --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 514" --pre
+define="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=startup_stm32f407
+xx.lst startup_stm32f407xx.s
 
 
 
